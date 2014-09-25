@@ -11,11 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
-    
     @IBOutlet weak var nameText: UITextField!
-    
     @IBOutlet weak var messageText: UITextField!
- 
+    @IBOutlet weak var nameLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +37,14 @@ class ViewController: UIViewController {
         
         // Code will evaluate when pressing send mail button.
         messageLabel.hidden = false
+        nameLabel.hidden = false
         
-        
-        messageLabel.text = "Sending Email To \(nameText.text) \n\(messageText.text)"
-        
-        
-        messageLabel.textColor = UIColor.redColor()
+        nameLabel.text = nameText.text
+        messageLabel.text = messageText.text
 
-        messageLabel.backgroundColor = UIColor.grayColor()
+        nameLabel.textColor = UIColor.blueColor()
+        messageLabel.textColor = UIColor.greenColor()
+ //       messageLabel.backgroundColor = UIColor.blackColor()
         
         sender.backgroundColor = UIColor.yellowColor()
         

@@ -90,11 +90,11 @@
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWm-QK-jpC">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="87" width="329" height="96"/>
+                                    <rect key="frame" x="16" y="87" width="329" height="65"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tt-a9-JsM">
@@ -129,6 +129,15 @@
                                     <action selector="hideLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2oK-8h-Jqz"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEe-2y-PWr">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="153" width="108" height="33"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -139,6 +148,7 @@
                                 <exclude reference="0Tt-a9-JsM"/>
                                 <exclude reference="8UF-wz-LFj"/>
                                 <exclude reference="De4-bM-dyZ"/>
+                                <exclude reference="XEe-2y-PWr"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -149,6 +159,7 @@
                                 <include reference="0Tt-a9-JsM"/>
                                 <include reference="8UF-wz-LFj"/>
                                 <include reference="De4-bM-dyZ"/>
+                                <include reference="XEe-2y-PWr"/>
                             </mask>
                         </variation>
                     </view>
@@ -157,6 +168,7 @@
                     <connections>
                         <outlet property="messageLabel" destination="jWm-QK-jpC" id="ENt-sC-kOj"/>
                         <outlet property="messageText" destination="XWa-Z1-T7Q" id="Hns-p1-x9i"/>
+                        <outlet property="nameLabel" destination="XEe-2y-PWr" id="PMV-fr-fbF"/>
                         <outlet property="nameText" destination="Rt2-yp-bfW" id="Igg-mn-UJb"/>
                     </connections>
                 </viewController>
