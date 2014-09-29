@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "90DBF69919D71F1500E6D0D4"
-               BuildableName = "WebServiceConnector.app"
-               BlueprintName = "WebServiceConnector"
-               ReferencedContainer = "container:WebServiceConnector.xcodeproj">
+               BlueprintIdentifier = "90B292B219D7F0E400514016"
+               BuildableName = "tableViewController.app"
+               BlueprintName = "tableViewController"
+               ReferencedContainer = "container:tableViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "90DBF6AE19D71F1600E6D0D4"
-               BuildableName = "WebServiceConnectorTests.xctest"
-               BlueprintName = "WebServiceConnectorTests"
-               ReferencedContainer = "container:WebServiceConnector.xcodeproj">
+               BlueprintIdentifier = "90B292C719D7F0E400514016"
+               BuildableName = "tableViewControllerTests.xctest"
+               BlueprintName = "tableViewControllerTests"
+               ReferencedContainer = "container:tableViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "90DBF6AE19D71F1600E6D0D4"
-               BuildableName = "WebServiceConnectorTests.xctest"
-               BlueprintName = "WebServiceConnectorTests"
-               ReferencedContainer = "container:WebServiceConnector.xcodeproj">
+               BlueprintIdentifier = "90B292C719D7F0E400514016"
+               BuildableName = "tableViewControllerTests.xctest"
+               BlueprintName = "tableViewControllerTests"
+               ReferencedContainer = "container:tableViewController.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90DBF69919D71F1500E6D0D4"
-            BuildableName = "WebServiceConnector.app"
-            BlueprintName = "WebServiceConnector"
-            ReferencedContainer = "container:WebServiceConnector.xcodeproj">
+            BlueprintIdentifier = "90B292B219D7F0E400514016"
+            BuildableName = "tableViewController.app"
+            BlueprintName = "tableViewController"
+            ReferencedContainer = "container:tableViewController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90DBF69919D71F1500E6D0D4"
-            BuildableName = "WebServiceConnector.app"
-            BlueprintName = "WebServiceConnector"
-            ReferencedContainer = "container:WebServiceConnector.xcodeproj">
+            BlueprintIdentifier = "90B292B219D7F0E400514016"
+            BuildableName = "tableViewController.app"
+            BlueprintName = "tableViewController"
+            ReferencedContainer = "container:tableViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90DBF69919D71F1500E6D0D4"
-            BuildableName = "WebServiceConnector.app"
-            BlueprintName = "WebServiceConnector"
-            ReferencedContainer = "container:WebServiceConnector.xcodeproj">
+            BlueprintIdentifier = "90B292B219D7F0E400514016"
+            BuildableName = "tableViewController.app"
+            BlueprintName = "tableViewController"
+            ReferencedContainer = "container:tableViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
