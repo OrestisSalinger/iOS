@@ -60,6 +60,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="random fact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uo0-fa-MIz">
+                                <rect key="frame" x="-2" y="454" width="372" height="74"/>
+                                <color key="backgroundColor" red="0.047058828179999998" green="0.011764707040000001" blue="0.019607843829999999" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.047058828179999998" green="0.011764707040000001" blue="0.019607843829999999" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -72,6 +79,7 @@
                         <outlet property="bckgrdImageView" destination="bS9-2r-zos" id="WNx-14-xx2"/>
                         <outlet property="breedLabel" destination="jS6-Hv-lgO" id="GWN-Dd-cnN"/>
                         <outlet property="nameLabel" destination="ac4-8d-s8Q" id="63M-2X-eQ7"/>
+                        <outlet property="randomFact" destination="uo0-fa-MIz" id="tUk-8J-fpn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
