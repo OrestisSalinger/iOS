@@ -18,7 +18,7 @@ class ITunesSearchAPI: NSObject {
     
     //Search iTunes
     func searchItunesFor(searchTerm: String) {
-        println("here")
+        
         //Clean up the search terms by replacing spaces with +
         var itunesSearchTerm = searchTerm.stringByReplacingOccurrencesOfString(" ", withString: "+",
             options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
@@ -34,10 +34,13 @@ class ITunesSearchAPI: NSObject {
         println("Request: \(request)")
         var connection: NSURLConnection = NSURLConnection(request: request, delegate: self,
         startImmediately: false)
-        
+        println("...........Starting connection")
+
       
         
         connection.start()
+        println("...........Connection has started")
+
     }
     
     //NSURLConnection delegate method
@@ -49,22 +52,41 @@ class ITunesSearchAPI: NSObject {
     func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) {
         //New request so we need to clear the data object
         self.data = NSMutableData()
+        println("...........connection(didReceiveResponse) \ndataLength: \(self.data.length)")
+        
+        
     }
     
     //NSURLConnection delegate method
     func connection(connection: NSURLConnection!, didReceiveData data: NSData!) {
         //Append incoming data
         self.data.appendData(data)
+        println("...........connection(didReceiveData)")
+
     }
     
     //NSURLConnection delegate method
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         //Finished receiving data and convert it to a JSON object
         var err: NSError
-        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data,
-            options:NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+//        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data,
+//            options:NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
         
-        delegate?.didRecieveResponse(jsonResult)
+        let jsonObject : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        
+//        println("JSon: \(jsonObject.allValues)\n\n\n\n\n\n\n\n\n\n\n\n\n")
+
+        
+        if let name = (((jsonObject as? NSArray)?[1] as? NSDictionary)?["artistName"] as? NSDictionary)?["name"]{
+            println("Name: \(name)")
+
+        
+        }
+        
+        
+        
+        
+        delegate?.didRecieveResponse(jsonObject as NSDictionary)
     }
     
 }
