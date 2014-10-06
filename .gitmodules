@@ -1,0 +1,6 @@
+[submodule "bitfountain/XingConnector/SwiftOAuth2"]
+	path = bitfountain/XingConnector/SwiftOAuth2
+	url = git@github.com:crousselle/SwiftOAuth2.git
+[submodule "bitfountain/XingConnector/--recursive"]
+	path = bitfountain/XingConnector/--recursive
+	url = git@github.com:crousselle/SwiftOAuth2.git

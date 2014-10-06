@@ -14,6 +14,13 @@
 		9039AD6B19E2A69400D70DD4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9039AD6A19E2A69400D70DD4 /* Images.xcassets */; };
 		9039AD6E19E2A69400D70DD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9039AD6C19E2A69400D70DD4 /* LaunchScreen.xib */; };
 		9039AD7A19E2A69400D70DD4 /* XingConnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039AD7919E2A69400D70DD4 /* XingConnectorTests.swift */; };
+		9039AD8619E2A6E600D70DD4 /* TaskCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039AD8419E2A6E600D70DD4 /* TaskCellTableViewCell.swift */; };
+		9039AD8819E2A72800D70DD4 /* XingConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039AD8719E2A72800D70DD4 /* XingConnection.swift */; };
+		904224D419E2B05C0047CA8D /* CRAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904224D019E2B05C0047CA8D /* CRAuthenticationViewController.swift */; };
+		904224D519E2B05C0047CA8D /* CRCredentialsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904224D119E2B05C0047CA8D /* CRCredentialsHelper.swift */; };
+		904224D619E2B05C0047CA8D /* CROAuth2Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904224D219E2B05C0047CA8D /* CROAuth2Client.swift */; };
+		904224D719E2B05C0047CA8D /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904224D319E2B05C0047CA8D /* KeychainService.swift */; };
+		9082351619E2CA1F0081FC5A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904224E819E2B3640047CA8D /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +30,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9039AD5A19E2A69400D70DD4;
 			remoteInfo = XingConnector;
+		};
+		904224E719E2B3640047CA8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 904224E219E2B3640047CA8D /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		904224E919E2B3640047CA8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 904224E219E2B3640047CA8D /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -38,6 +59,13 @@
 		9039AD7319E2A69400D70DD4 /* XingConnectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XingConnectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9039AD7819E2A69400D70DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9039AD7919E2A69400D70DD4 /* XingConnectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XingConnectorTests.swift; sourceTree = "<group>"; };
+		9039AD8419E2A6E600D70DD4 /* TaskCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCellTableViewCell.swift; sourceTree = "<group>"; };
+		9039AD8719E2A72800D70DD4 /* XingConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XingConnection.swift; sourceTree = "<group>"; };
+		904224D019E2B05C0047CA8D /* CRAuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRAuthenticationViewController.swift; sourceTree = "<group>"; };
+		904224D119E2B05C0047CA8D /* CRCredentialsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRCredentialsHelper.swift; sourceTree = "<group>"; };
+		904224D219E2B05C0047CA8D /* CROAuth2Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CROAuth2Client.swift; sourceTree = "<group>"; };
+		904224D319E2B05C0047CA8D /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		904224E219E2B3640047CA8D /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = SwiftOAuth2/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9082351619E2CA1F0081FC5A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +90,7 @@
 		9039AD5219E2A69400D70DD4 = {
 			isa = PBXGroup;
 			children = (
+				904224E219E2B3640047CA8D /* Alamofire.xcodeproj */,
 				9039AD5D19E2A69400D70DD4 /* XingConnector */,
 				9039AD7619E2A69400D70DD4 /* XingConnectorTests */,
 				9039AD5C19E2A69400D70DD4 /* Products */,
@@ -79,7 +109,13 @@
 		9039AD5D19E2A69400D70DD4 /* XingConnector */ = {
 			isa = PBXGroup;
 			children = (
+				9039AD8719E2A72800D70DD4 /* XingConnection.swift */,
+				9039AD8419E2A6E600D70DD4 /* TaskCellTableViewCell.swift */,
 				9039AD6019E2A69400D70DD4 /* AppDelegate.swift */,
+				904224D019E2B05C0047CA8D /* CRAuthenticationViewController.swift */,
+				904224D119E2B05C0047CA8D /* CRCredentialsHelper.swift */,
+				904224D219E2B05C0047CA8D /* CROAuth2Client.swift */,
+				904224D319E2B05C0047CA8D /* KeychainService.swift */,
 				9039AD6519E2A69400D70DD4 /* ViewController.swift */,
 				9039AD6719E2A69400D70DD4 /* Main.storyboard */,
 				9039AD6A19E2A69400D70DD4 /* Images.xcassets */,
@@ -113,6 +149,15 @@
 				9039AD7819E2A69400D70DD4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		904224E319E2B3640047CA8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				904224E819E2B3640047CA8D /* Alamofire.framework */,
+				904224EA19E2B3640047CA8D /* AlamofireTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +227,12 @@
 			mainGroup = 9039AD5219E2A69400D70DD4;
 			productRefGroup = 9039AD5C19E2A69400D70DD4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 904224E319E2B3640047CA8D /* Products */;
+					ProjectRef = 904224E219E2B3640047CA8D /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9039AD5A19E2A69400D70DD4 /* XingConnector */,
@@ -189,6 +240,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		904224E819E2B3640047CA8D /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 904224E719E2B3640047CA8D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		904224EA19E2B3640047CA8D /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 904224E919E2B3640047CA8D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9039AD5919E2A69400D70DD4 /* Resources */ = {
@@ -215,8 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9039AD8619E2A6E600D70DD4 /* TaskCellTableViewCell.swift in Sources */,
+				9039AD8819E2A72800D70DD4 /* XingConnection.swift in Sources */,
 				9039AD6619E2A69400D70DD4 /* ViewController.swift in Sources */,
+				904224D419E2B05C0047CA8D /* CRAuthenticationViewController.swift in Sources */,
 				9039AD6119E2A69400D70DD4 /* AppDelegate.swift in Sources */,
+				904224D719E2B05C0047CA8D /* KeychainService.swift in Sources */,
+				904224D519E2B05C0047CA8D /* CRCredentialsHelper.swift in Sources */,
+				904224D619E2B05C0047CA8D /* CROAuth2Client.swift in Sources */,
 				9039AD6419E2A69400D70DD4 /* XingConnector.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +485,7 @@
 				9039AD7F19E2A69400D70DD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9039AD8019E2A69400D70DD4 /* Build configuration list for PBXNativeTarget "XingConnectorTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +494,7 @@
 				9039AD8219E2A69400D70DD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
