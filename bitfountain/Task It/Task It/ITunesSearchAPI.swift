@@ -15,6 +15,12 @@ protocol ITunesSearchAPIProtocol {
 class ITunesSearchAPI: NSObject {
     var data: NSMutableData = NSMutableData()
     var delegate: ITunesSearchAPIProtocol?
+    //
+    // visits: /v1/users/:user_id/visits
+    // consumer key: adc70795cb5ef65405da
+    // consumer secret: f44c6af769e899516ca0d3e9fbae92b900f0fd07
+    
+    var urlXing = "https://api.xing.com/v1/users/:user_id/visits"
     
     //Search iTunes
     func searchItunesFor(searchTerm: String) {
@@ -27,13 +33,26 @@ class ITunesSearchAPI: NSObject {
         
         
         var escapedSearchTerm = itunesSearchTerm //.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        
+        
         var urlPath = "http://itunes.apple.com/search?term=\(escapedSearchTerm)&media=music"
-        var url: NSURL = NSURL(string: urlPath)
+
+        
+        var urlPathIMDB = "http://www.imdb.com/xml/find?json=1&nr=1&nm=on&q=\(itunesSearchTerm)"
+        
+        var url: NSURL = NSURL(string: urlPathIMDB)
+        
+        
+        
         println("Search iTunes API at URL \(urlPath)")
+        
         var request: NSURLRequest = NSURLRequest(URL: url)
         println("Request: \(request)")
-        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self,
-        startImmediately: false)
+        
+        
+        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self,startImmediately: false)
+
+        
         println("...........Starting connection")
 
       
@@ -74,11 +93,11 @@ class ITunesSearchAPI: NSObject {
         
         let jsonObject : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)
         
-//        println("JSon: \(jsonObject.allValues)\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        println("JSon: \(jsonObject)\n\n\n\n\n\n\n\n\n\n\n\n\n")
 
         
-        if let name = (((jsonObject as? NSArray)?[1] as? NSDictionary)?["artistName"] as? NSDictionary)?["name"]{
-            println("Name: \(name)")
+        if let desc: AnyObject = (((jsonObject as? NSArray)?[0] as? NSDictionary)?["description"] as? NSDictionary)?["description"]{
+            println("Description: \(desc)")
 
         
         }

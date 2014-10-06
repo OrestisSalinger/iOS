@@ -10,26 +10,38 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ITunesSearchAPIProtocol {
 
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     var api: ITunesSearchAPI = ITunesSearchAPI()
     var tableData: NSArray = NSArray()
     var imageCache = NSMutableDictionary()
+    let searchDefault = "Orestis"
     
-    var artistNames:[String] = []
-    var collectionCensoredName:[String] = []
-    var collectionPrice:[Float32] = []
 
+    var artistDatas:[ArtistData] = []
     
-    
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
          api.delegate = self;
-        api.searchItunesFor("Elvis")
-
-        println("Searching for Elvis...")
         
+        
+        api.searchItunesFor(searchDefault)
+
+        println("Searching for \(searchDefault)...")
+        
+    }
+    @IBAction func searchButtonPressed(sender: UIButton) {
+//        self.tableView.delegate = self
+//        self.tableView.dataSource = self
+//        api.delegate = self;
+        var searchTerm = self.searchTextField.text
+        
+        api.searchItunesFor(searchTerm)
+        
+        println("Searching for \(searchTerm)...")
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,38 +52,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func didRecieveResponse(results: NSDictionary) {
         println("Received results")
-
-        
-//        println("\(results) \n......................\n")
-        
         // Store the results in our table data array
                 if results.count>0 {
-                    self.tableData = results["results"] as NSArray
                     
-                    for var i = 0; i < tableData.count; i++ {
-//                        artistId
-//                        previewUrl
-//
-//
+                    println("Results: \(results)")
+                    
+                    self.tableData = results["name_exact"] as NSArray
+                    
+                    for var i = 0; i < self.tableData.count; i++ {
+                        var name:String = tableData[i]["name"] as String
+                        var desc:String = tableData[i]["description"] as String
                         
+                        println("Artist Name: \(name)")
+                        println("desc: \(desc) \n......................\n")
                         
-                        var name:String = tableData[i]["artistName"] as String
-                        var collName:String = tableData[i]["collectionCensoredName"] as String
-                        var price:Float32 = tableData[i]["collectionPrice"] as Float32
-
-                        println("Artist Name: \(name) \n......................\n")
-                        println("Collection Name: \(collName)")
-                        println("Collection Price: \(price) \n......................\n")
+                        var artistData = ArtistData()
+                        artistData.name = name
+                        artistData.collectionName = desc
+                        artistDatas.append(artistData)
                         
-
+//                        println(artistData)
+//                        println(artistDatas.count)
                         
-                        artistNames.append(name)
-                        collectionCensoredName.append(collName)
-                        collectionPrice.append(price)
-                        
-                        
-                        
-                                          }
+                    }
                         self.tableView?.reloadData()
 
                 }
@@ -81,27 +84,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
 //    UITableViewDataSource
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        println("Index: \(indexPath.row)")
-        var cell: TaskCellTableViewCell = tableView.dequeueReusableCellWithIdentifier("myCell") as TaskCellTableViewCell
-        
-        cell.taskLabel.text = artistNames.removeAtIndex(0)
-        cell.descriptionLabel.text = collectionCensoredName.removeAtIndex(0)
-        
-       var f = collectionPrice.removeAtIndex(0)
-        
-        cell.dateLabel.text = "\(f)"
-        
+        var cell = TaskCellTableViewCell();
+        if(artistDatas.count > 0){
+            println("************ artistDatas count: \(artistDatas.count)")
+            println("Index: \(indexPath.row)")
+            cell = tableView.dequeueReusableCellWithIdentifier("myCell") as TaskCellTableViewCell
+                
+                
+
+            cell.taskLabel.text = artistDatas.removeAtIndex(0).name
+            cell.descriptionLabel.text = artistDatas.removeAtIndex(0).collectionName
         
         
         if(indexPath.row%2 != 0) {
             cell.backgroundColor = UIColor.grayColor()
             
         }
+        }
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return artistNames.count
+        
+        println("************ Table Rows: \(artistDatas.count)")
+        return artistDatas.count
     }
 //    UITableViewDelegate
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {

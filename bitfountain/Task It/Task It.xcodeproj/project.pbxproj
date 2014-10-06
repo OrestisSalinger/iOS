@@ -15,6 +15,7 @@
 		901E9C7C19E17A86009FC878 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 901E9C7A19E17A86009FC878 /* LaunchScreen.xib */; };
 		901E9C8819E17A86009FC878 /* Task_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E9C8719E17A86009FC878 /* Task_ItTests.swift */; };
 		901E9C9219E1992A009FC878 /* TaskCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E9C9119E1992A009FC878 /* TaskCellTableViewCell.swift */; };
+		9039AD5119E28E0300D70DD4 /* artistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039AD5019E28E0300D70DD4 /* artistData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		901E9C8619E17A86009FC878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		901E9C8719E17A86009FC878 /* Task_ItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_ItTests.swift; sourceTree = "<group>"; };
 		901E9C9119E1992A009FC878 /* TaskCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCellTableViewCell.swift; sourceTree = "<group>"; };
+		9039AD5019E28E0300D70DD4 /* artistData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = artistData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		901E9C6E19E17A86009FC878 /* Task It */ = {
 			isa = PBXGroup;
 			children = (
+				9039AD5019E28E0300D70DD4 /* artistData.swift */,
 				90053B4519E1A27B00777FED /* ITunesSearchAPI.swift */,
 				901E9C9119E1992A009FC878 /* TaskCellTableViewCell.swift */,
 				901E9C7119E17A86009FC878 /* AppDelegate.swift */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9039AD5119E28E0300D70DD4 /* artistData.swift in Sources */,
 				90053B4619E1A27B00777FED /* ITunesSearchAPI.swift in Sources */,
 				901E9C7419E17A86009FC878 /* ViewController.swift in Sources */,
 				901E9C9219E1992A009FC878 /* TaskCellTableViewCell.swift in Sources */,

@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9039AD6119E2A69400D70DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039AD6019E2A69400D70DD4 /* AppDelegate.swift */; };
+		9039AD6419E2A69400D70DD4 /* XingConnector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9039AD6219E2A69400D70DD4 /* XingConnector.xcdatamodeld */; };
+		9039AD6619E2A69400D70DD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039AD6519E2A69400D70DD4 /* ViewController.swift */; };
+		9039AD6919E2A69400D70DD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9039AD6719E2A69400D70DD4 /* Main.storyboard */; };
+		9039AD6B19E2A69400D70DD4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9039AD6A19E2A69400D70DD4 /* Images.xcassets */; };
+		9039AD6E19E2A69400D70DD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9039AD6C19E2A69400D70DD4 /* LaunchScreen.xib */; };
+		9039AD7A19E2A69400D70DD4 /* XingConnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039AD7919E2A69400D70DD4 /* XingConnectorTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9039AD7419E2A69400D70DD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9039AD5319E2A69400D70DD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9039AD5A19E2A69400D70DD4;
+			remoteInfo = XingConnector;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9039AD5B19E2A69400D70DD4 /* XingConnector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XingConnector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9039AD5F19E2A69400D70DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9039AD6019E2A69400D70DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9039AD6319E2A69400D70DD4 /* XingConnector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XingConnector.xcdatamodel; sourceTree = "<group>"; };
+		9039AD6519E2A69400D70DD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9039AD6819E2A69400D70DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9039AD6A19E2A69400D70DD4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9039AD6D19E2A69400D70DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9039AD7319E2A69400D70DD4 /* XingConnectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XingConnectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9039AD7819E2A69400D70DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9039AD7919E2A69400D70DD4 /* XingConnectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XingConnectorTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9039AD5819E2A69400D70DD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9039AD7019E2A69400D70DD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9039AD5219E2A69400D70DD4 = {
+			isa = PBXGroup;
+			children = (
+				9039AD5D19E2A69400D70DD4 /* XingConnector */,
+				9039AD7619E2A69400D70DD4 /* XingConnectorTests */,
+				9039AD5C19E2A69400D70DD4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9039AD5C19E2A69400D70DD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9039AD5B19E2A69400D70DD4 /* XingConnector.app */,
+				9039AD7319E2A69400D70DD4 /* XingConnectorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9039AD5D19E2A69400D70DD4 /* XingConnector */ = {
+			isa = PBXGroup;
+			children = (
+				9039AD6019E2A69400D70DD4 /* AppDelegate.swift */,
+				9039AD6519E2A69400D70DD4 /* ViewController.swift */,
+				9039AD6719E2A69400D70DD4 /* Main.storyboard */,
+				9039AD6A19E2A69400D70DD4 /* Images.xcassets */,
+				9039AD6C19E2A69400D70DD4 /* LaunchScreen.xib */,
+				9039AD6219E2A69400D70DD4 /* XingConnector.xcdatamodeld */,
+				9039AD5E19E2A69400D70DD4 /* Supporting Files */,
+			);
+			path = XingConnector;
+			sourceTree = "<group>";
+		};
+		9039AD5E19E2A69400D70DD4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9039AD5F19E2A69400D70DD4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9039AD7619E2A69400D70DD4 /* XingConnectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				9039AD7919E2A69400D70DD4 /* XingConnectorTests.swift */,
+				9039AD7719E2A69400D70DD4 /* Supporting Files */,
+			);
+			path = XingConnectorTests;
+			sourceTree = "<group>";
+		};
+		9039AD7719E2A69400D70DD4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9039AD7819E2A69400D70DD4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9039AD5A19E2A69400D70DD4 /* XingConnector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9039AD7D19E2A69400D70DD4 /* Build configuration list for PBXNativeTarget "XingConnector" */;
+			buildPhases = (
+				9039AD5719E2A69400D70DD4 /* Sources */,
+				9039AD5819E2A69400D70DD4 /* Frameworks */,
+				9039AD5919E2A69400D70DD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XingConnector;
+			productName = XingConnector;
+			productReference = 9039AD5B19E2A69400D70DD4 /* XingConnector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9039AD7219E2A69400D70DD4 /* XingConnectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9039AD8019E2A69400D70DD4 /* Build configuration list for PBXNativeTarget "XingConnectorTests" */;
+			buildPhases = (
+				9039AD6F19E2A69400D70DD4 /* Sources */,
+				9039AD7019E2A69400D70DD4 /* Frameworks */,
+				9039AD7119E2A69400D70DD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9039AD7519E2A69400D70DD4 /* PBXTargetDependency */,
+			);
+			name = XingConnectorTests;
+			productName = XingConnectorTests;
+			productReference = 9039AD7319E2A69400D70DD4 /* XingConnectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9039AD5319E2A69400D70DD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Orestis Salinger";
+				TargetAttributes = {
+					9039AD5A19E2A69400D70DD4 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					9039AD7219E2A69400D70DD4 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 9039AD5A19E2A69400D70DD4;
+					};
+				};
+			};
+			buildConfigurationList = 9039AD5619E2A69400D70DD4 /* Build configuration list for PBXProject "XingConnector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9039AD5219E2A69400D70DD4;
+			productRefGroup = 9039AD5C19E2A69400D70DD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9039AD5A19E2A69400D70DD4 /* XingConnector */,
+				9039AD7219E2A69400D70DD4 /* XingConnectorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9039AD5919E2A69400D70DD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9039AD6919E2A69400D70DD4 /* Main.storyboard in Resources */,
+				9039AD6E19E2A69400D70DD4 /* LaunchScreen.xib in Resources */,
+				9039AD6B19E2A69400D70DD4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9039AD7119E2A69400D70DD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9039AD5719E2A69400D70DD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9039AD6619E2A69400D70DD4 /* ViewController.swift in Sources */,
+				9039AD6119E2A69400D70DD4 /* AppDelegate.swift in Sources */,
+				9039AD6419E2A69400D70DD4 /* XingConnector.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9039AD6F19E2A69400D70DD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9039AD7A19E2A69400D70DD4 /* XingConnectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9039AD7519E2A69400D70DD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9039AD5A19E2A69400D70DD4 /* XingConnector */;
+			targetProxy = 9039AD7419E2A69400D70DD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9039AD6719E2A69400D70DD4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9039AD6819E2A69400D70DD4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9039AD6C19E2A69400D70DD4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9039AD6D19E2A69400D70DD4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9039AD7B19E2A69400D70DD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9039AD7C19E2A69400D70DD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9039AD7E19E2A69400D70DD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XingConnector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9039AD7F19E2A69400D70DD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XingConnector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9039AD8119E2A69400D70DD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XingConnectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XingConnector.app/XingConnector";
+			};
+			name = Debug;
+		};
+		9039AD8219E2A69400D70DD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XingConnectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XingConnector.app/XingConnector";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9039AD5619E2A69400D70DD4 /* Build configuration list for PBXProject "XingConnector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9039AD7B19E2A69400D70DD4 /* Debug */,
+				9039AD7C19E2A69400D70DD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9039AD7D19E2A69400D70DD4 /* Build configuration list for PBXNativeTarget "XingConnector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9039AD7E19E2A69400D70DD4 /* Debug */,
+				9039AD7F19E2A69400D70DD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9039AD8019E2A69400D70DD4 /* Build configuration list for PBXNativeTarget "XingConnectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9039AD8119E2A69400D70DD4 /* Debug */,
+				9039AD8219E2A69400D70DD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9039AD6219E2A69400D70DD4 /* XingConnector.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9039AD6319E2A69400D70DD4 /* XingConnector.xcdatamodel */,
+			);
+			currentVersion = 9039AD6319E2A69400D70DD4 /* XingConnector.xcdatamodel */;
+			path = XingConnector.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9039AD5319E2A69400D70DD4 /* Project object */;
+}
