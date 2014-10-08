@@ -1,0 +1,402 @@
+
+========================
+ASL is here to serve you
+> 
+
+Oct  7 15:37:59  cromwellwallet[266] <Warning>: BLE Code: 1
+Oct  7 15:37:59  cromwellwallet[266] <Warning>: BLE Data: 03
+Oct  7 15:37:59  cromwellwallet[266] <Warning>: Data from BLE: <03>, Code: 1
+Oct  7 15:37:59  cromwellwallet[266] <Warning>: Data from BLE: <03>, Code: 1
+Oct  7 15:37:59  BTLEServer[92] <Notice>: (Note ) CentralManager state is now powered on
+Oct  7 15:37:59  BTLEServer[92] <Notice>: (Note ) Service "Human Interface Device" has been published
+Oct  7 15:37:59  BTLEServer[92] <Notice>: (Note ) Service "Battery" has been published
+Oct  7 15:37:59  BTLEServer[92] <Notice>: (Note ) Service "Current Time" has been published
+Oct  7 15:37:59  SpringBoard[34] <Warning>: BTM: local device power state changed
+Oct  7 15:37:59  SpringBoard[34] <Warning>: BTM: power is now on
+Oct  7 15:37:59  locationd[54] <Warning>: WiProx Power state bluetooth on
+Oct  7 15:38:00  cromwellwallet[266] <Warning>: Time left: 1
+Oct  7 15:38:01  cromwellwallet[266] <Warning>: Time left: 0
+Oct  7 15:38:02  cromwellwallet[266] <Warning>: Timer done. Trying to go back!
+Oct  7 15:38:04  cromwellwallet[266] <Warning>: Need to activate card with ID: saflokKey##20 ; TechName: 3
+Oct  7 15:38:04  cromwellwallet[266] <Warning>: Time left: 9
+Oct  7 15:38:05  cromwellwallet[266] <Warning>: Time left: 8
+Oct  7 15:38:06  cromwellwallet[266] <Warning>: Time left: 7
+Oct  7 15:38:07  cromwellwallet[266] <Warning>: Time left: 6
+Oct  7 15:38:08  cromwellwallet[266] <Warning>: Time left: 5
+Oct  7 15:38:09  cromwellwallet[266] <Warning>: Time left: 4
+Oct  7 15:38:09  mediaserverd[47] <Warning>: WPDeviceScanner deallocing
+Oct  7 15:38:09  wifid[15] <Error>: WiFi:[434381889.931041]: No AWDL interface found.
+Oct  7 15:38:09  wifid[15] <Error>: WiFi:[434381889.931566]: No AWDL interface found.
+Oct  7 15:38:09  wirelessproxd[67] <Notice>: (Note ) stopDeviceScan: DBDeviceTypeAirplayRouting (9)
+Oct  7 15:38:09  wirelessproxd[67] <Notice>: (Note ) Removed devices: <CFArray 0x15d164f0 [0x3a0efae0]>{type = immutable, count = 1, values = (
+		0 : <CFString 0x15d14a80 [0x3a0efae0]>{contents = "WPPuckAppleTVPresence"}
+	)}
+Oct  7 15:38:09  wirelessproxd[67] <Notice>: (Note ) Removed devices: <CFArray 0x15e1c230 [0x3a0efae0]>{type = immutable, count = 0, values = ()}
+Oct  7 15:38:09  wirelessproxd[67] <Notice>: (Error) error event: (<OS_xpc_error: <error: 0x3be827dc> { count = 1, contents =
+		"XPCErrorDescription" => <string: 0x3be829bc> { length = 18, contents = "Connection invalid" }
+	}>)
+Oct  7 15:38:10  cromwellwallet[266] <Warning>: Did Disable Project with Number: 20
+Oct  7 15:38:10  cromwellwallet[266] <Warning>: BLE Code: 2
+Oct  7 15:38:10  cromwellwallet[266] <Warning>: BLE Data: 00
+Oct  7 15:38:10  cromwellwallet[266] <Warning>: Data from BLE: <00>, Code: 2
+Oct  7 15:38:10  cromwellwallet[266] <Warning>: Data from BLE: <00>, Code: 2
+Oct  7 15:39:01  cromwellwallet[266] <Warning>: VIEW DID APPEAR!!!
+Oct  7 15:39:04  cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:39:07  cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:39:09  cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:39:18  cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:39:23  cromwellwallet[266] <Warning>: VIEW DID APPEAR!!!
+Oct  7 15:39:24  cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:39:32  cromwellwallet[266] <Warning>: VIEW DID APPEAR!!!
+Oct  7 15:39:34  cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:39:42  cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:39:49  cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:39:49  cromwellwallet[266] <Warning>: Applications: (
+	    "<WalletApplication: 0x1db510>"
+	)
+Oct  7 15:40:15  cromwellwallet[266] <Warning>: VIEW DID APPEAR!!!
+Oct  7 15:41:15  cromwellwallet[266] <Warning>: VIEW DID APPEAR!!!
+Oct  7 15:41:23  cromwellwallet[266] <Warning>: VIEW DID APPEAR!!!
+Oct  7 15:41:25  cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:41:25  cromwellwallet[266] <Warning>: Applications: (
+	    "<WalletApplication: 0x2103c0>"
+	)
+Oct  7 15:41:28  cromwellwallet[266] <Warning>: VIEW DID APPEAR!!!
+Oct  7 15:41:30  cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:41:30  cromwellwallet[266] <Warning>: Applications: (
+	    "<WalletApplication: 0x1e5450>"
+	)
+Oct  7 15:41:30  cromwellwallet[266] <Warning>: numberOfRowsInSection: 0
+Oct  7 15:41:31  cromwellwallet[266] <Warning>: Sync Device: JSON data: {
+	  "synchDeviceFromWalletRequest" : {
+	    "registrationId" : "a496169fe30fb62e6f85561092b4725c4f10d8bc0cb5e4ba7640461ac518d976",
+	    "walletId" : 10001,
+	    "walletApplicationInfo" : [
+	      {
+	        "metadataVersion" : "2",
+	        "appStatus" : "DEPLOYED",
+	        "qualifier" : 1,
+	        "walletAppId" : "saflokKey##20"
+	      }
+	    ],
+	    "pushType" : "APN"
+	  }
+	}
+Oct  7 15:41:31  cromwellwallet[266] <Warning>: Setting up the list
+Oct  7 15:41:31  cromwellwallet[266] <Warning>: Stting up the list
+Oct  7 15:41:31  cromwellwallet[266] <Warning>: Card name = myAppName
+Oct  7 15:41:31  cromwellwallet[266] <Warning>: numberOfRowsInSection: 1
+Oct  7 15:41:31  cromwellwallet[266] <Warning>: Cell no: 0
+Oct  7 15:41:34  cromwellwallet[266] <Warning>: Response message = {"synchDeviceFromWalletResponse":{"status":{"code":29000,"description":"Ok"},"walletApplications":[]}}
+Oct  7 15:41:34  cromwellwallet[266] <Warning>: Connection result: Success, 29000, Ok
+Oct  7 15:41:34  cromwellwallet[266] <Warning>: Applications: (
+	    "<WalletApplication: 0x2f75f0>"
+	)
+Oct  7 15:41:34  cromwellwallet[266] <Warning>: Is this is the callback? #_2
+Oct  7 15:41:34  cromwellwallet[266] <Warning>: applications array size is: 1
+Oct  7 15:41:34  cromwellwallet[266] <Warning>: Next Operation: JSON data: {
+	  "nextOperationRequest" : {
+	    "registrationId" : "a496169fe30fb62e6f85561092b4725c4f10d8bc0cb5e4ba7640461ac518d976",
+	    "pushType" : "APN"
+	  }
+	}
+Oct  7 15:41:34  cromwellwallet[266] <Warning>: Setting up the list
+Oct  7 15:41:34  cromwellwallet[266] <Warning>: Stting up the list
+Oct  7 15:41:34  cromwellwallet[266] <Warning>: Card name = myAppName
+Oct  7 15:41:34  cromwellwallet[266] <Warning>: numberOfRowsInSection: 1
+Oct  7 15:41:34  cromwellwallet[266] <Warning>: Cell no: 0
+Oct  7 15:41:36  cromwellwallet[266] <Warning>: Sellected 
+Oct  7 15:41:36  cromwellwallet[266] <Warning>: Response message = {"nextOperationResponse":{"status":{"code":29000,"description":"Ok"},"operation":"NOP"}}
+Oct  7 15:41:36  cromwellwallet[266] <Warning>: Connection Successful, code: 29000, description: Ok
+Oct  7 15:41:36  cromwellwallet[266] <Warning>: NOP
+Oct  7 15:41:36  cromwellwallet[266] <Warning>: Sellected 
+Oct  7 15:41:37  cromwellwallet[266] <Warning>: Sellected 
+Oct  7 15:41:37  cromwellwallet[266] <Warning>: Sellected 
+Oct  7 15:41:37  cromwellwallet[266] <Warning>: Sellected 
+Oct  7 15:41:38  cromwellwallet[266] <Warning>: Sellected 
+Oct  7 15:41:38  cromwellwallet[266] <Warning>: Sellected 
+Oct  7 15:42:44  cromwellwallet[266] <Warning>: VIEW DID APPEAR!!!
+Oct  7 15:42:46  cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:44:46  cromwellwallet[266] <Warning>: VIEW DID APPEAR!!!
+Oct  7 15:45:29  lockdownd[53] <Notice>: 3be7d18c _bump_connection_count: connectionCount now 20 usbHostConnected false pairableHostConnected false unpairedPtpAllowed false
+Oct  7 15:45:29  kernel[0] <Debug>: AppleD1881PMUPowerSource: AppleUSBCableDetect 0
+Oct  7 15:45:29  kernel[0] <Debug>: AppleD1881PMUPowerSource: AppleUSBCableType Detached
+Oct  7 15:45:29  ptpd[234] <Notice>: PTP interface has been deactivated.
+Oct  7 15:46:16  lockdownd[53] <Notice>: 3be7d18c _bump_connection_count: connectionCount now 21 usbHostConnected true pairableHostConnected false unpairedPtpAllowed false
+Oct  7 15:46:16  lockdownd[53] <Notice>: 3be7d18c _bump_connection_count: connectionCount now 22 usbHostConnected true pairableHostConnected true unpairedPtpAllowed false
+Oct  7 15:46:16  kernel[0] <Debug>: AppleD1881PMUPowerSource: AppleUSBCableDetect 1
+Oct  7 15:46:16  kernel[0] <Debug>: AppleD1881PMUPowerSource: AppleUSBCableType USBHost
+Oct  7 15:46:16  ptpd[279] <Error>: ptpd: startResponder
+Oct  7 15:46:16  ptpd[279] <Notice>: Photo library available
+Oct  7 15:46:16  ptpd[279] <Notice>: PTP interface has been activated at high speed.
+Oct  7 15:46:17  lockdownd[53] <Notice>: 01a83000 ask_user_to_trust: ignoring user allowed pairing from connection 17 since we're now at connection 22
+Oct  7 15:46:17  lockdownd[53] <Notice>: 01a83000 ask_user_to_trust: asking the user if they want to pair
+Oct  7 15:46:17  lockdownd[53] <Notice>: 01a83000 set_response_error: handle_is_host_trusted PairingDialogResponsePending
+Oct  7 15:46:28  lockdownd[53] <Notice>: 01b05000 __ask_user_to_trust_block_invoke_2: user said trust at time 12447 connection 22
+Oct  7 15:46:35  lockdownd[53] <Notice>: 01b05000 __ask_user_to_trust_block_invoke_2: sleep
+Oct  7 15:46:35  lockdownd[53] <Notice>: 01b05000 trigger_host_pair: notifying host to pair
+Oct  7 15:46:35  lockdownd[53] <Notice>: 3be7d18c __lockdown_should_disable_pairing_block_invoke: disablePairing: 0
+Oct  7 15:46:35  lockdownd[53] <Notice>: 002c1000 mc_allow_pairing: hostMayPairWithOptions said yes with prompt
+Oct  7 15:46:35  lockdownd[53] <Notice>: 002c1000 ask_user_to_trust: allowed pairing from connection 22 since we're still on that connection
+Oct  7 15:46:35  lockdownd[53] <Notice>: 002c1000 store_escrow_record: Creating escrow bag for 4F607A5C-5993-44BA-A088-FF6EB5590A19
+Oct  7 15:46:35  lockdownd[53] <Notice>: 002c1000 handle_pair: pair for usbmuxd succeeded
+Oct  7 15:46:38  lockdownd[53] <Notice>: 3be7d18c _bump_connection_count: connectionCount now 23 usbHostConnected false pairableHostConnected false unpairedPtpAllowed false
+Oct  7 15:46:38  ptpd[279] <Notice>: PTP interface has been deactivated.
+Oct  7 15:46:38  lockdownd[53] <Notice>: 3be7d18c _bump_connection_count: connectionCount now 24 usbHostConnected false pairableHostConnected false unpairedPtpAllowed false
+Oct  7 15:46:38  kernel[0] <Debug>: AppleSynopsysOTGDevice::gated_setProperties taking device off USB for 50 msec
+Oct  7 15:46:38  kernel[0] <Debug>: virtual IOReturn AppleUSBDeviceMux::message(UInt32, IOService *, void *) - kMessageInterfaceWasDeActivated
+Oct  7 15:46:38  kernel[0] <Debug>: AppleUSBDeviceMux::reportStats: USB mux statistics: 
+Oct  7 15:46:38  kernel[0] <Debug>: USB mux: 35 reads / 0 errors, 46 writes / 0 errors
+Oct  7 15:46:38  kernel[0] <Debug>: USB mux: 0 short packets, 0 dups
+Oct  7 15:46:39  lockdownd[53] <Notice>: 3be7d18c _bump_connection_count: connectionCount now 25 usbHostConnected true pairableHostConnected false unpairedPtpAllowed false
+Oct  7 15:46:39  lockdownd[53] <Notice>: 3be7d18c _bump_connection_count: connectionCount now 26 usbHostConnected true pairableHostConnected true unpairedPtpAllowed false
+Oct  7 15:46:39  ptpd[279] <Notice>: Photo library available
+Oct  7 15:46:39  ptpd[279] <Notice>: PTP interface has been activated at high speed.
+Oct  7 15:46:41  mobile_assertion_agent[287] <Notice>: main: Starting up.
+Oct  7 15:46:41  lockdownd[53] <Notice>: 00343000 special_case_get: MGCopyAnswer(kMGQMobileEquipmentIdentifier) returned NULL
+Oct  7 15:46:41  timed[18] <Notice>: (Note ) CoreTime: Received time 10/07/2014 13:46:38±60.00 from "MobileLockdown"
+Oct  7 15:46:41  timed[18] <Notice>: (Note ) CoreTime: Not setting system time to 10/07/2014 13:46:40 from NTP because time is unchanged
+Oct  7 15:46:41  timed[18] <Notice>: (Note ) CoreTime: Want active time in 12.40hrs. Need active time in 95.73hrs.
+Oct  7 15:46:41  timed[18] <Notice>: (Note ) CoreTime: Received timezone "Europe/Berlin" from "MobileLockdown"
+Oct  7 15:46:41  timed[18] <Notice>: (Note ) CoreTime: Current mcc: '228' simulated:'0'.
+Oct  7 15:46:41  SpringBoard[34] <Notice>: 2014-10-07 15:46:41.600|34|0x16ecd770: Region monitoring not available or enabled. Trigger ignored!
+Oct  7 15:46:41  lockdownd[53] <Notice>: 01a83000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:41  lockdownd[53] <Notice>: 01b05000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:41  lockdownd[53] <Notice>: 01b05000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:41  lockdownd[53] <Notice>: 002c1000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:42  lockdownd[53] <Notice>: 01a83000 spawn_service_agent: Could not look up service in the map
+Oct  7 15:46:42  lockdownd[53] <Notice>: 01a83000 spawn_and_handle_checkin: Could not spawn the com.apple.GPUTools.MobileService service agent:InvalidService 
+Oct  7 15:46:42  lockdownd[53] <Notice>: 002c1000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:42  lockdownd[53] <Notice>: 002c1000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:42  lockdownd[53] <Notice>: 01b05000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:42  lockdownd[53] <Notice>: 002c1000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:42  lockdownd[53] <Notice>: 01b05000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:42  lockdownd[53] <Notice>: 01b05000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:42  lockdownd[53] <Notice>: 002c1000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:42  lockdownd[53] <Notice>: 002c1000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:42  lockdownd[53] <Notice>: 002c1000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:46:42  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:46:43  librariand[101] <Error>: ubiquity account is not configured (or is disabled for this client), not creating collection
+Oct  7 15:46:43  librariand[101] <Error>: error in _handle_client_request: LibrarianErrorDomain/10/Unable to configure the collection.
+Oct  7 15:46:43  atc[289] <Warning>: {MediaLibrary} Database validation succeeded
+Oct  7 15:46:43  lockdownd[53] <Notice>: 00343000 __copy_itunes_value_block_invoke: com.apple.mobile.iTunes.store/downloaded-apps -> <CFArray 0x17d6bab0 [0x3a0efae0]>{type = immutable, count = 3, values = (
+		0 : <CFString 0x17d6ba30 [0x3a0efae0]>{contents = "com.legic.ble.IDNet14"}
+		1 : <CFString 0x17d6ba50 [0x3a0efae0]>{contents = "com.legic.cromwellwallet"}
+		2 : <CFString 0x17d6ba80 [0x3a0efae0]>{contents = "com.legic.ble.bluechip-demo"}
+	)}
+Oct  7 15:46:43  MobileStorageMounter[293] <Error>: Looking into: /Developer/Library/LaunchDaemons
+Oct  7 15:46:43  MobileStorageMounter[293] <Error>: ignoring: /Developer/Library/LaunchDaemons
+Oct  7 15:46:43  MobileStorageMounter[293] <Error>: Loading /Developer/Library/LaunchDaemons/com.apple.dt.power.plist
+Oct  7 15:46:44  MobileStorageMounter[293] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:46:44  MobileStorageMounter[293] <Warning>: Warning: Libinfo call to mDNSResponder on main thread
+Oct  7 15:46:44  MobileStorageMounter[293] <Error>: ignoring: /Developer/Library/LaunchDaemons
+Oct  7 15:46:44  installd[63] <Notice>: 0x373000 __main_block_invoke: Got developer image mounted notification; rebuilding system map.
+Oct  7 15:46:44  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:46:44  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:46:44  DTFetchSymbols[295] <Notice>: Found paths:
+Oct  7 15:46:44  DTFetchSymbols[295] <Notice>: /usr/lib/dyld
+Oct  7 15:46:44  DTFetchSymbols[295] <Notice>: /System/Library/Caches/com.apple.dyld/dyld_shared_cache_armv7
+Oct  7 15:46:44  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:46:44  DTFetchSymbols[297] <Notice>: Found paths:
+Oct  7 15:46:44  DTFetchSymbols[297] <Notice>: /usr/lib/dyld
+Oct  7 15:46:44  DTFetchSymbols[297] <Notice>: /System/Library/Caches/com.apple.dyld/dyld_shared_cache_armv7
+Oct  7 15:46:44  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:46:44  DTFetchSymbols[298] <Notice>: Found paths:
+Oct  7 15:46:44  DTFetchSymbols[298] <Notice>: /usr/lib/dyld
+Oct  7 15:46:44  DTFetchSymbols[298] <Notice>: /System/Library/Caches/com.apple.dyld/dyld_shared_cache_armv7
+Oct  7 15:46:44  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:46:44  DTFetchSymbols[299] <Notice>: Found paths:
+Oct  7 15:46:44  DTFetchSymbols[299] <Notice>: /usr/lib/dyld
+Oct  7 15:46:44  DTFetchSymbols[299] <Notice>: /System/Library/Caches/com.apple.dyld/dyld_shared_cache_armv7
+Oct  7 15:46:45  installd[63] <Error>: 0x373000 load_application_info: Info plist for /Applications/SocialPPTApp.app was missing or empty
+Oct  7 15:46:46  installd[63] <Notice>: 0x373000 __reconcileApps_block_invoke_2: com.apple.MobileReplayer got added
+Oct  7 15:46:46  installd[63] <Notice>: 0x373000 generate_application_map: Saved updated install map for -|system|-
+Oct  7 15:46:46  /usr/libexec/lsd[75] <Error>: Need to synchronize with MobileInstallation
+Oct  7 15:46:46  /usr/libexec/lsd[75] <Notice>: LaunchServices: Adding com.apple.MobileReplayer to registration list
+Oct  7 15:46:46  lsd[75] <Warning>: LaunchServices: Updating identifier store
+Oct  7 15:46:46  SpringBoard[34] <Error>: libMobileGestalt MobileGestalt.c:835: nike-ipod is static and will never generate a notification
+Oct  7 15:46:46  SpringBoard[34] <Error>: libMobileGestalt MobileGestalt.c:835: still-camera is static and will never generate a notification
+Oct  7 15:46:46  SpringBoard[34] <Error>: libMobileGestalt MobileGestalt.c:835: magnetometer is static and will never generate a notification
+Oct  7 15:46:46  SpringBoard[34] <Error>: libMobileGestalt MobileGestalt.c:835: any-telephony is static and will never generate a notification
+Oct  7 15:46:46  SpringBoard[34] <Error>: libMobileGestalt MobileGestalt.c:835: stand-alone-contacts is static and will never generate a notification
+Oct  7 15:46:47  syncdefaultsd[301] <Notice>: (Note ) SYDAlwaysOnAccount: no account (null)
+Oct  7 15:46:47  syncdefaultsd[301] <Notice>: (Note ) SYDAccount: no account
+Oct  7 15:46:47  syncdefaultsd[301] <Notice>: (Note ) SYDPIMAccount: no account (null)
+Oct  7 15:46:47  librariand[101] <Error>: ubiquity account is not configured (or is disabled for this client), not creating collection
+Oct  7 15:46:47  librariand[101] <Error>: error in _handle_client_request: LibrarianErrorDomain/10/Unable to configure the collection.
+Oct  7 15:46:48  geod[113] <Warning>: Can't get bundle identifier for process 303
+Oct  7 15:46:48  awdd[302] <Error>: CoreLocation: CLClient is deprecated. Will be obsolete soon.
+Oct  7 15:47:01  deleted[303] <Warning>: {MediaLibrary} Database validation succeeded
+Oct  7 15:47:01  deleted[303] <Warning>: {MediaLibrary} Database validation succeeded
+Oct  7 15:47:01  medialibraryd[112] <Warning>: {MediaLibrary} [MLWriter] ending transaction <__NSConcreteUUID 0x1652e6f0> 635AEFF7-6B83-476E-ACE8-AD376679BF25. shouldCommit=0.
+Oct  7 15:47:01  librariand[101] <Error>: ubiquity account is not configured (or is disabled for this client), not creating collection
+Oct  7 15:47:01  librariand[101] <Error>: error in _handle_client_request: LibrarianErrorDomain/10/Unable to configure the collection.
+Oct  7 15:47:01  deleted[303] <Error>: 0x3c7000 __DeleteLibrarian_block_invoke: unable to determine evictable space: The operation couldn’t be completed. (LibrarianErrorDomain error 10 - Unable to configure the collection.)
+Oct  7 15:48:43  medialibraryd[112] <Warning>: {MediaLibrary} [MediaLibraryService] Cancelling any active or suspended import operations in progress for process <unknown process> (process ID = 289)
+Oct  7 15:48:43  medialibraryd[112] <Warning>: {MediaLibrary} [MLWriter] Cleaning up any remaining transactions for ended process <unknown process> (process ID = 289)
+Oct  7 15:49:59  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:49:59  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:49:59  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:50:15  crash_mover[307] <Notice>: (Warn ) <crash_mover.m mv_recursive:98> Moving './LowMemory-2014-09-30-110207.ips' -> '/var/mobile/Library/Logs/CrashReporter/LowMemory-2014-09-30-110207.ips'
+Oct  7 15:50:15  crash_mover[307] <Notice>: (Warn ) <crash_mover.m mv_recursive:98> Moving './Baseband/log-bb-2014-09-18-stats.plist' -> '/var/mobile/Library/Logs/CrashReporter/Baseband/log-bb-2014-09-18-stats.plist'
+Oct  7 15:50:15  crash_mover[307] <Notice>: (Warn ) <crash_mover.m mv_recursive:98> Moving './Baseband/log-bb-2014-09-20-stats.plist' -> '/var/mobile/Library/Logs/CrashReporter/Baseband/log-bb-2014-09-20-stats.plist'
+Oct  7 15:50:15  crash_mover[307] <Notice>: (Warn ) <crash_mover.m mv_recursive:98> Moving './Baseband/log-bb-2014-09-21-stats.plist' -> '/var/mobile/Library/Logs/CrashReporter/Baseband/log-bb-2014-09-21-stats.plist'
+Oct  7 15:50:15  crash_mover[307] <Notice>: (Warn ) <crash_mover.m mv_recursive:98> Moving './Baseband/log-bb-2014-09-22-stats.plist' -> '/var/mobile/Library/Logs/CrashReporter/Baseband/log-bb-2014-09-22-stats.plist'
+Oct  7 15:50:15  crash_mover[307] <Notice>: (Warn ) <crash_mover.m mv_recursive:98> Moving './Baseband/log-bb-2014-09-23-stats.plist' -> '/var/mobile/Library/Logs/CrashReporter/Baseband/log-bb-2014-09-23-stats.plist'
+Oct  7 15:50:15  crash_mover[307] <Notice>: (Warn ) <crash_mover.m mv_recursive:98> Moving './Baseband/log-bb-2014-09-30-stats.plist' -> '/var/mobile/Library/Logs/CrashReporter/Baseband/log-bb-2014-09-30-stats.plist'
+Oct  7 15:50:15  crash_mover[307] <Notice>: (Warn ) <crash_mover.m mv_recursive:98> Moving './Baseband/log-bb-2014-10-05-stats.plist' -> '/var/mobile/Library/Logs/CrashReporter/Baseband/log-bb-2014-10-05-stats.plist'
+Oct  7 15:50:15  crash_mover[307] <Notice>: (Warn ) <crash_mover.m mv_recursive:98> Moving './Baseband/log-bb-2014-10-06-stats.plist' -> '/var/mobile/Library/Logs/CrashReporter/Baseband/log-bb-2014-10-06-stats.plist'
+Oct  7 15:50:15  aggregated[39] <Notice>: BUG in libdispatch client: kevent[EVFILT_WRITE] delete: "No such file or directory" - 0x2
+Oct  7 15:50:40  lockdownd[53] <Notice>: 3be7d18c _bump_connection_count: connectionCount now 27 usbHostConnected false pairableHostConnected false unpairedPtpAllowed false
+Oct  7 15:50:40  lockdownd[53] <Notice>: 3be7d18c _bump_connection_count: connectionCount now 28 usbHostConnected false pairableHostConnected false unpairedPtpAllowed false
+Oct  7 15:50:40  ptpd[279] <Notice>: PTP interface has been deactivated.
+Oct  7 15:50:40  kernel[0] <Debug>: AppleD1881PMUPowerSource: AppleUSBCableDetect 0
+Oct  7 15:50:40  kernel[0] <Debug>: AppleD1881PMUPowerSource: AppleUSBCableType Detached
+Oct  7 15:50:40  kernel[0] <Debug>: virtual IOReturn AppleUSBDeviceMux::message(UInt32, IOService *, void *) - kMessageInterfaceWasDeActivated
+Oct  7 15:50:40  kernel[0] <Debug>: AppleUSBDeviceMux::reportStats: USB mux statistics: 
+Oct  7 15:50:40  kernel[0] <Debug>: USB mux: 4720 reads / 0 errors, 14914 writes / 0 errors
+Oct  7 15:50:40  kernel[0] <Debug>: USB mux: 0 short packets, 0 dups
+Oct  7 15:50:40  mobile_assertion_agent[287] <Notice>: service_one_connection: Connection closed for client iTunes.
+Oct  7 15:50:44  lockdownd[53] <Notice>: 3be7d18c _bump_connection_count: connectionCount now 29 usbHostConnected true pairableHostConnected false unpairedPtpAllowed false
+Oct  7 15:50:44  lockdownd[53] <Notice>: 3be7d18c _bump_connection_count: connectionCount now 30 usbHostConnected true pairableHostConnected true unpairedPtpAllowed false
+Oct  7 15:50:44  kernel[0] <Debug>: AppleD1881PMUPowerSource: AppleUSBCableDetect 1
+Oct  7 15:50:44  kernel[0] <Debug>: AppleD1881PMUPowerSource: AppleUSBCableType USBHost
+Oct  7 15:50:44  ptpd[279] <Notice>: Photo library available
+Oct  7 15:50:44  ptpd[279] <Notice>: PTP interface has been activated at high speed.
+Oct  7 15:50:44  lockdownd[53] <Notice>: 01c17000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:44  lockdownd[53] <Notice>: 01d1b000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:44  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:50:44  lockdownd[53] <Notice>: 01d1b000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:44  lockdownd[53] <Notice>: 01d1b000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:44  lockdownd[53] <Notice>: 01b05000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:44  lockdownd[53] <Notice>: 002c1000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:44  lockdownd[53] <Notice>: 01b05000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:44  lockdownd[53] <Notice>: 01b05000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:45  lockdownd[53] <Notice>: 01d1b000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:45  lockdownd[53] <Notice>: 00343000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:45  lockdownd[53] <Notice>: 00343000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:45  lockdownd[53] <Notice>: 01b87000 special_case_get: MGCopyAnswer(kMGQMobileEquipmentIdentifier) returned NULL
+Oct  7 15:50:45  lockdownd[53] <Notice>: 002c1000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:45  timed[18] <Notice>: (Note ) CoreTime: Received time 10/07/2014 13:50:42±60.00 from "MobileLockdown"
+Oct  7 15:50:45  timed[18] <Notice>: (Note ) CoreTime: Not setting system time to 10/07/2014 13:50:44 from NTP because time is unchanged
+Oct  7 15:50:45  timed[18] <Notice>: (Note ) CoreTime: Want active time in 12.33hrs. Need active time in 95.66hrs.
+Oct  7 15:50:45  SpringBoard[34] <Notice>: 2014-10-07 15:50:45.285|34|0x16c762c0: Region monitoring not available or enabled. Trigger ignored!
+Oct  7 15:50:45  timed[18] <Notice>: (Note ) CoreTime: Received timezone "Europe/Berlin" from "MobileLockdown"
+Oct  7 15:50:45  timed[18] <Notice>: (Note ) CoreTime: Current mcc: '228' simulated:'0'.
+Oct  7 15:50:45  lockdownd[53] <Notice>: 002c1000 set_response_error: handle_get_value GetProhibited
+Oct  7 15:50:45  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:50:45  DTFetchSymbols[314] <Notice>: Found paths:
+Oct  7 15:50:45  DTFetchSymbols[314] <Notice>: /usr/lib/dyld
+Oct  7 15:50:45  DTFetchSymbols[314] <Notice>: /System/Library/Caches/com.apple.dyld/dyld_shared_cache_armv7
+Oct  7 15:50:45  lockdownd[53] <Error>: FAILURE: Failed to open property list at file:///private/var/db/launchd.db/com.apple.launchd/overrides.plist for reading. (The operation couldn’t be completed. No such file or directory)
+Oct  7 15:50:45  DTFetchSymbols[315] <Notice>: Found paths:
+Oct  7 15:50:45  DTFetchSymbols[315] <Notice>: /usr/lib/dyld
+Oct  7 15:50:45  DTFetchSymbols[315] <Notice>: /System/Library/Caches/com.apple.dyld/dyld_shared_cache_armv7
+Oct  7 15:50:46  librariand[101] <Error>: ubiquity account is not configured (or is disabled for this client), not creating collection
+Oct  7 15:50:46  librariand[101] <Error>: error in _handle_client_request: LibrarianErrorDomain/10/Unable to configure the collection.
+Oct  7 15:50:46 iPhone atc[313] <Warning>: {MediaLibrary} Database validation succeeded
+Oct  7 15:50:46 iPhone lockdownd[53] <Notice>: 00343000 __copy_itunes_value_block_invoke: com.apple.mobile.iTunes.store/downloaded-apps -> <CFArray 0x17d66210 [0x3a0efae0]>{type = immutable, count = 3, values = (
+		0 : <CFString 0x17d6b8c0 [0x3a0efae0]>{contents = "com.legic.ble.IDNet14"}
+		1 : <CFString 0x17d66070 [0x3a0efae0]>{contents = "com.legic.cromwellwallet"}
+		2 : <CFString 0x17d67490 [0x3a0efae0]>{contents = "com.legic.ble.bluechip-demo"}
+	)}
+Oct  7 15:50:47 iPhone librariand[101] <Error>: ubiquity account is not configured (or is disabled for this client), not creating collection
+Oct  7 15:50:47 iPhone librariand[101] <Error>: error in _handle_client_request: LibrarianErrorDomain/10/Unable to configure the collection.
+Oct  7 15:50:47 iPhone medialibraryd[112] <Warning>: {MediaLibrary} [MLWriter] ending transaction <__NSConcreteUUID 0x16612f60> C9701A7D-0D09-411D-8AB1-9806BE997DE0. shouldCommit=0.
+Oct  7 15:50:47 iPhone librariand[101] <Error>: ubiquity account is not configured (or is disabled for this client), not creating collection
+Oct  7 15:50:47 iPhone librariand[101] <Error>: error in _handle_client_request: LibrarianErrorDomain/10/Unable to configure the collection.
+Oct  7 15:50:47 iPhone deleted[303] <Error>: 0x3c7000 __DeleteLibrarian_block_invoke: unable to determine evictable space: The operation couldn’t be completed. (LibrarianErrorDomain error 10 - Unable to configure the collection.)
+Oct  7 15:52:04 iPhone cromwellwallet[266] <Warning>: VIEW DID APPEAR!!!
+Oct  7 15:52:06 iPhone cromwellwallet[266] <Warning>: Data encrypted!!!!!!!!
+Oct  7 15:52:06 iPhone cromwellwallet[266] <Warning>: Applications: (
+	    "<WalletApplication: 0x218590>"
+	)
+Oct  7 15:52:06 iPhone cromwellwallet[266] <Warning>: numberOfRowsInSection: 0
+Oct  7 15:52:07 iPhone cromwellwallet[266] <Warning>: Sync Device: JSON data: {
+	  "synchDeviceFromWalletRequest" : {
+	    "registrationId" : "a496169fe30fb62e6f85561092b4725c4f10d8bc0cb5e4ba7640461ac518d976",
+	    "walletId" : 10001,
+	    "walletApplicationInfo" : [
+	      {
+	        "metadataVersion" : "2",
+	        "appStatus" : "DEPLOYED",
+	        "qualifier" : 1,
+	        "walletAppId" : "saflokKey##20"
+	      }
+	    ],
+	    "pushType" : "APN"
+	  }
+	}
+Oct  7 15:52:07 iPhone cromwellwallet[266] <Warning>: Setting up the list
+Oct  7 15:52:07 iPhone cromwellwallet[266] <Warning>: Stting up the list
+Oct  7 15:52:07 iPhone cromwellwallet[266] <Warning>: Card name = myAppName
+Oct  7 15:52:07 iPhone cromwellwallet[266] <Warning>: numberOfRowsInSection: 1
+Oct  7 15:52:07 iPhone cromwellwallet[266] <Warning>: Cell no: 0
+Oct  7 15:52:09 iPhone cromwellwallet[266] <Warning>: Response message = {"synchDeviceFromWalletResponse":{"status":{"code":29000,"description":"Ok"},"walletApplications":[{"walletAppId":"saflokKey##20","qualifier":0,"parentId":null,"appStatus":"DEPLOY_IN_PROGRESS","metadataVersion":"3","metadata":{"meta":[{"systemParamName":null,"customParamName":"soid","handlerParamName":null,"value":{"stringValue":"0000","longValue":null,"base64BinaryValue":null},"listValue":[]},{"systemParamName":null,"customParamName":"roomKey","handlerParamName":null,"value":{"stringValue":"501","longValue":null,"base64BinaryValue":null},"listValue":[]}]},"technologyName":"BLE","seType":"BLE"}]}}
+Oct  7 15:52:09 iPhone cromwellwallet[266] <Warning>: Connection result: Success, 29000, Ok
+Oct  7 15:52:09 iPhone cromwellwallet[266] <Warning>: Applications: (
+	    "<WalletApplication: 0x1efdc0>"
+	)
+Oct  7 15:52:09 iPhone cromwellwallet[266] <Warning>: Is this is the callback? #_2
+Oct  7 15:52:09 iPhone cromwellwallet[266] <Warning>: applications array size is: 1
+Oct  7 15:52:09 iPhone cromwellwallet[266] <Warning>: Next Operation: JSON data: {
+	  "nextOperationRequest" : {
+	    "registrationId" : "a496169fe30fb62e6f85561092b4725c4f10d8bc0cb5e4ba7640461ac518d976",
+	    "pushType" : "APN"
+	  }
+	}
+Oct  7 15:52:09 iPhone cromwellwallet[266] <Warning>: Setting up the list
+Oct  7 15:52:09 iPhone cromwellwallet[266] <Warning>: Stting up the list
+Oct  7 15:52:09 iPhone cromwellwallet[266] <Warning>: numberOfRowsInSection: 0
+Oct  7 15:52:11 iPhone cromwellwallet[266] <Warning>: Response message = {"nextOperationResponse":{"status":{"code":29000,"description":"Ok"},"operation":"EXCHANGE_SE_DATA"}}
+Oct  7 15:52:11 iPhone cromwellwallet[266] <Warning>: Connection Successful, code: 29000, description: Ok
+Oct  7 15:52:11 iPhone cromwellwallet[266] <Warning>: EXCHANGE_SE_DATA
+Oct  7 15:52:11 iPhone cromwellwallet[266] <Warning>: Exchange SE Data: JSON data: {
+	  "exchangeSEDataRequest" : {
+	    "registrationId" : "a496169fe30fb62e6f85561092b4725c4f10d8bc0cb5e4ba7640461ac518d976",
+	    "pushType" : "APN"
+	  }
+	}
+Oct  7 15:52:11 iPhone cromwellwallet[266] <Warning>: Next Operation: JSON data: {
+	  "nextOperationRequest" : {
+	    "registrationId" : "a496169fe30fb62e6f85561092b4725c4f10d8bc0cb5e4ba7640461ac518d976",
+	    "pushType" : "APN"
+	  }
+	}
+Oct  7 15:52:13 iPhone cromwellwallet[266] <Warning>: Response message = {"exchangeSEDataResponse":{"status":{"code":29000,"description":"Ok"},"operationId":40003453,"data":"eyJvcGVyYXRpb24iOiJXUklURSIsImZpbGVuYW1lIjoiQUFBQUZITmhabXh2YTB0bEFBQUFBUT09Iiwid2FsbGV0Q3VzdG9tZXJBcHBJZCI6InNhZmxva0tleSMjMjAiLCJrZXlSTyI6IlJITTE2NEVmQmt1aXQxd00rQ1NLZmc9PSIsImtleVJXIjoiajlIU01JUFJyb1dtbHdoaFc4UGNiUT09Iiwia2V5RGVyaXZlSW5mbyI6IllXSmpaQT09IiwiZGF0YSI6ImVvUGVkUEdYMmRhMUs0UWgwcGhwRzcwUlJkYW82WGxSZzZKNWZGQ2NpZHM9In0="}}
+Oct  7 15:52:13 iPhone cromwellwallet[266] <Warning>: Response message = {"nextOperationResponse":{"status":{"code":29000,"description":"Ok"},"operation":"EXCHANGE_SE_DATA"}}
+Oct  7 15:52:13 iPhone cromwellwallet[266] <Warning>: Connection Successful, code: 29000, description: Ok
+Oct  7 15:52:13 iPhone cromwellwallet[266] <Warning>: Connection Successful, code: 29000, description: Ok
+Oct  7 15:52:13 iPhone cromwellwallet[266] <Warning>: Operation ID: 40003453
+Oct  7 15:52:13 iPhone cromwellwallet[266] <Warning>: Data: <7b226f70 65726174 696f6e22 3a225752 49544522 2c226669 6c656e61 6d65223a 22414141 4146484e 685a6d78 76613074 6c414141 4141513d 3d222c22 77616c6c 65744375 73746f6d 65724170 70496422 3a227361 666c6f6b 4b657923 23323022 2c226b65 79524f22 3a225248 4d313634 4566426b 75697431 774d2b43 534b6667 3d3d222c 226b6579 5257223a 226a3948 534d4950 52726f57 6d6c7768 68573850 6362513d 3d222c22 6b657944 65726976 65496e66 6f223a22 59574a6a 5a413d3d 222c2264 61746122 3a22656f 50656450 47583264 61314b34 51683070 68704737 30525264 616f3658 6c526736 4a356646 43636964 733d227d>
+Oct  7 15:52:13 iPhone securityd[87] <Error>:  CFPropertyListReadFromFile file file:///Library/Keychains/accountStatus.plist: The operation couldn’t be completed. (Cocoa error 260.)
+Oct  7 15:52:13 iPhone cromwellwallet[266] <Warning>: Exchange SE Data Result: JSON data: {
+	  "exchangeSEDataResultRequest" : {
+	    "operationId" : 40003453,
+	    "data" : "eyJzdGF0dXMiOjB9"
+	  }
+	}
+Oct  7 15:52:13 iPhone cromwellwallet[266] <Warning>: EXCHANGE_SE_DATA
+Oct  7 15:52:13 iPhone cromwellwallet[266] <Warning>: Exchange SE Data: JSON data: {
+	  "exchangeSEDataRequest" : {
+	    "registrationId" : "a496169fe30fb62e6f85561092b4725c4f10d8bc0cb5e4ba7640461ac518d976",
+	    "pushType" : "APN"
+	  }
+	}
+Oct  7 15:52:13 iPhone cromwellwallet[266] <Warning>: Next Operation: JSON data: {
+	  "nextOperationRequest" : {
+	    "registrationId" : "a496169fe30fb62e6f85561092b4725c4f10d8bc0cb5e4ba7640461ac518d976",
+	    "pushType" : "APN"
+	  }
+	}
+Oct  7 15:52:15 iPhone cromwellwallet[266] <Warning>: Response message = {"nextOperationResponse":{"status":{"code":29000,"description":"Ok"},"operation":"NOP"}}
+Oct  7 15:52:15 iPhone cromwellwallet[266] <Warning>: Response message = {"exchangeSEDataResultResponse":{"status":{"code":29000,"description":"Ok"}}}
+Oct  7 15:52:15 iPhone cromwellwallet[266] <Warning>: Connection Successful, code: 29000, description: Ok
+Oct  7 15:52:15 iPhone cromwellwallet[266] <Warning>: Connection Successful, code: 29000, description: Ok
+Oct  7 15:52:15 iPhone cromwellwallet[266] <Warning>: NOP
+Oct  7 15:52:15 iPhone cromwellwallet[266] <Warning>: Response message = {"exchangeSEDataResponse":{"status":{"code":69800,"description":"Exchange SE Data failed."},"operationId":null,"data":null}}
+Oct  7 15:52:15 iPhone cromwellwallet[266] <Warning>: Exchange SE Data Result success.
+Oct  7 15:52:15 iPhone cromwellwallet[266] <Warning>: Connection Failed, code: 69800, description: Exchange SE Data failed.
+Oct  7 15:52:15 iPhone cromwellwallet[266] <Warning>: Operation ID: <null>
+Oct  7 15:52:15 iPhone cromwellwallet[266] <Warning>: Data: (null)
+Oct  7 15:52:15 iPhone cromwellwallet[266] <Warning>: Exchange SE Data server call failed with code: 69800.
