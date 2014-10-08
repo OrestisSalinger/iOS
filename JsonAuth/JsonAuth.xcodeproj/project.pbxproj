@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		904F6BD819E52E61006ADF55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904F6BD719E52E61006ADF55 /* AppDelegate.swift */; };
+		904F6BDA19E52E61006ADF55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904F6BD919E52E61006ADF55 /* ViewController.swift */; };
+		904F6BDD19E52E61006ADF55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 904F6BDB19E52E61006ADF55 /* Main.storyboard */; };
+		904F6BDF19E52E61006ADF55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 904F6BDE19E52E61006ADF55 /* Images.xcassets */; };
+		904F6BE219E52E61006ADF55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904F6BE019E52E61006ADF55 /* LaunchScreen.xib */; };
+		904F6BEE19E52E61006ADF55 /* JsonAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904F6BED19E52E61006ADF55 /* JsonAuthTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		904F6BE819E52E61006ADF55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 904F6BCA19E52E61006ADF55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 904F6BD119E52E61006ADF55;
+			remoteInfo = JsonAuth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		904F6BD219E52E61006ADF55 /* JsonAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		904F6BD619E52E61006ADF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		904F6BD719E52E61006ADF55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		904F6BD919E52E61006ADF55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		904F6BDC19E52E61006ADF55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		904F6BDE19E52E61006ADF55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		904F6BE119E52E61006ADF55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		904F6BE719E52E61006ADF55 /* JsonAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsonAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		904F6BEC19E52E61006ADF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		904F6BED19E52E61006ADF55 /* JsonAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonAuthTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		904F6BCF19E52E61006ADF55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		904F6BE419E52E61006ADF55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		904F6BC919E52E61006ADF55 = {
+			isa = PBXGroup;
+			children = (
+				904F6BD419E52E61006ADF55 /* JsonAuth */,
+				904F6BEA19E52E61006ADF55 /* JsonAuthTests */,
+				904F6BD319E52E61006ADF55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		904F6BD319E52E61006ADF55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				904F6BD219E52E61006ADF55 /* JsonAuth.app */,
+				904F6BE719E52E61006ADF55 /* JsonAuthTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		904F6BD419E52E61006ADF55 /* JsonAuth */ = {
+			isa = PBXGroup;
+			children = (
+				904F6BD719E52E61006ADF55 /* AppDelegate.swift */,
+				904F6BD919E52E61006ADF55 /* ViewController.swift */,
+				904F6BDB19E52E61006ADF55 /* Main.storyboard */,
+				904F6BDE19E52E61006ADF55 /* Images.xcassets */,
+				904F6BE019E52E61006ADF55 /* LaunchScreen.xib */,
+				904F6BD519E52E61006ADF55 /* Supporting Files */,
+			);
+			path = JsonAuth;
+			sourceTree = "<group>";
+		};
+		904F6BD519E52E61006ADF55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				904F6BD619E52E61006ADF55 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		904F6BEA19E52E61006ADF55 /* JsonAuthTests */ = {
+			isa = PBXGroup;
+			children = (
+				904F6BED19E52E61006ADF55 /* JsonAuthTests.swift */,
+				904F6BEB19E52E61006ADF55 /* Supporting Files */,
+			);
+			path = JsonAuthTests;
+			sourceTree = "<group>";
+		};
+		904F6BEB19E52E61006ADF55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				904F6BEC19E52E61006ADF55 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		904F6BD119E52E61006ADF55 /* JsonAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 904F6BF119E52E61006ADF55 /* Build configuration list for PBXNativeTarget "JsonAuth" */;
+			buildPhases = (
+				904F6BCE19E52E61006ADF55 /* Sources */,
+				904F6BCF19E52E61006ADF55 /* Frameworks */,
+				904F6BD019E52E61006ADF55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JsonAuth;
+			productName = JsonAuth;
+			productReference = 904F6BD219E52E61006ADF55 /* JsonAuth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		904F6BE619E52E61006ADF55 /* JsonAuthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 904F6BF419E52E61006ADF55 /* Build configuration list for PBXNativeTarget "JsonAuthTests" */;
+			buildPhases = (
+				904F6BE319E52E61006ADF55 /* Sources */,
+				904F6BE419E52E61006ADF55 /* Frameworks */,
+				904F6BE519E52E61006ADF55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				904F6BE919E52E61006ADF55 /* PBXTargetDependency */,
+			);
+			name = JsonAuthTests;
+			productName = JsonAuthTests;
+			productReference = 904F6BE719E52E61006ADF55 /* JsonAuthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		904F6BCA19E52E61006ADF55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Orestis Salinger";
+				TargetAttributes = {
+					904F6BD119E52E61006ADF55 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					904F6BE619E52E61006ADF55 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 904F6BD119E52E61006ADF55;
+					};
+				};
+			};
+			buildConfigurationList = 904F6BCD19E52E61006ADF55 /* Build configuration list for PBXProject "JsonAuth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 904F6BC919E52E61006ADF55;
+			productRefGroup = 904F6BD319E52E61006ADF55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				904F6BD119E52E61006ADF55 /* JsonAuth */,
+				904F6BE619E52E61006ADF55 /* JsonAuthTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		904F6BD019E52E61006ADF55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				904F6BDD19E52E61006ADF55 /* Main.storyboard in Resources */,
+				904F6BE219E52E61006ADF55 /* LaunchScreen.xib in Resources */,
+				904F6BDF19E52E61006ADF55 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		904F6BE519E52E61006ADF55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		904F6BCE19E52E61006ADF55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				904F6BDA19E52E61006ADF55 /* ViewController.swift in Sources */,
+				904F6BD819E52E61006ADF55 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		904F6BE319E52E61006ADF55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				904F6BEE19E52E61006ADF55 /* JsonAuthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		904F6BE919E52E61006ADF55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 904F6BD119E52E61006ADF55 /* JsonAuth */;
+			targetProxy = 904F6BE819E52E61006ADF55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		904F6BDB19E52E61006ADF55 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				904F6BDC19E52E61006ADF55 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		904F6BE019E52E61006ADF55 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				904F6BE119E52E61006ADF55 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		904F6BEF19E52E61006ADF55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		904F6BF019E52E61006ADF55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		904F6BF219E52E61006ADF55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JsonAuth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		904F6BF319E52E61006ADF55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JsonAuth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		904F6BF519E52E61006ADF55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JsonAuthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JsonAuth.app/JsonAuth";
+			};
+			name = Debug;
+		};
+		904F6BF619E52E61006ADF55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JsonAuthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JsonAuth.app/JsonAuth";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		904F6BCD19E52E61006ADF55 /* Build configuration list for PBXProject "JsonAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				904F6BEF19E52E61006ADF55 /* Debug */,
+				904F6BF019E52E61006ADF55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		904F6BF119E52E61006ADF55 /* Build configuration list for PBXNativeTarget "JsonAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				904F6BF219E52E61006ADF55 /* Debug */,
+				904F6BF319E52E61006ADF55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		904F6BF419E52E61006ADF55 /* Build configuration list for PBXNativeTarget "JsonAuthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				904F6BF519E52E61006ADF55 /* Debug */,
+				904F6BF619E52E61006ADF55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 904F6BCA19E52E61006ADF55 /* Project object */;
+}

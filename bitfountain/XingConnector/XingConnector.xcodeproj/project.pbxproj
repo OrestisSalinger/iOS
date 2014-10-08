@@ -21,6 +21,13 @@
 		904224D619E2B05C0047CA8D /* CROAuth2Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904224D219E2B05C0047CA8D /* CROAuth2Client.swift */; };
 		904224D719E2B05C0047CA8D /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904224D319E2B05C0047CA8D /* KeychainService.swift */; };
 		9082351619E2CA1F0081FC5A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904224E819E2B3640047CA8D /* Alamofire.framework */; };
+		9082355C19E2F6590081FC5A /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9082355419E2F6590081FC5A /* extensions.swift */; };
+		9082355D19E2F6590081FC5A /* OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9082355519E2F6590081FC5A /* OAuth2.swift */; };
+		9082355E19E2F6590081FC5A /* OAuth2CodeGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9082355619E2F6590081FC5A /* OAuth2CodeGrant.swift */; };
+		9082355F19E2F6590081FC5A /* OAuth2ImplicitGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9082355719E2F6590081FC5A /* OAuth2ImplicitGrant.swift */; };
+		9082356019E2F6590081FC5A /* OAuth2Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9082355819E2F6590081FC5A /* OAuth2Request.swift */; };
+		9082356119E2F6590081FC5A /* OAuth2WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9082355919E2F6590081FC5A /* OAuth2WebViewController.swift */; };
+		9082356219E2F6590081FC5A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9082355A19E2F6590081FC5A /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +73,14 @@
 		904224D219E2B05C0047CA8D /* CROAuth2Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CROAuth2Client.swift; sourceTree = "<group>"; };
 		904224D319E2B05C0047CA8D /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		904224E219E2B3640047CA8D /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = SwiftOAuth2/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		9082355419E2F6590081FC5A /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		9082355519E2F6590081FC5A /* OAuth2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2.swift; sourceTree = "<group>"; };
+		9082355619E2F6590081FC5A /* OAuth2CodeGrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2CodeGrant.swift; sourceTree = "<group>"; };
+		9082355719E2F6590081FC5A /* OAuth2ImplicitGrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2ImplicitGrant.swift; sourceTree = "<group>"; };
+		9082355819E2F6590081FC5A /* OAuth2Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Request.swift; sourceTree = "<group>"; };
+		9082355919E2F6590081FC5A /* OAuth2WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2WebViewController.swift; sourceTree = "<group>"; };
+		9082355A19E2F6590081FC5A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9082355B19E2F6590081FC5A /* OAuth2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth2.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +105,14 @@
 		9039AD5219E2A69400D70DD4 = {
 			isa = PBXGroup;
 			children = (
+				9082355419E2F6590081FC5A /* extensions.swift */,
+				9082355519E2F6590081FC5A /* OAuth2.swift */,
+				9082355619E2F6590081FC5A /* OAuth2CodeGrant.swift */,
+				9082355719E2F6590081FC5A /* OAuth2ImplicitGrant.swift */,
+				9082355819E2F6590081FC5A /* OAuth2Request.swift */,
+				9082355919E2F6590081FC5A /* OAuth2WebViewController.swift */,
+				9082355A19E2F6590081FC5A /* Info.plist */,
+				9082355B19E2F6590081FC5A /* OAuth2.h */,
 				904224E219E2B3640047CA8D /* Alamofire.xcodeproj */,
 				9039AD5D19E2A69400D70DD4 /* XingConnector */,
 				9039AD7619E2A69400D70DD4 /* XingConnectorTests */,
@@ -263,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9082356219E2F6590081FC5A /* Info.plist in Resources */,
 				9039AD6919E2A69400D70DD4 /* Main.storyboard in Resources */,
 				9039AD6E19E2A69400D70DD4 /* LaunchScreen.xib in Resources */,
 				9039AD6B19E2A69400D70DD4 /* Images.xcassets in Resources */,
@@ -285,12 +309,18 @@
 			files = (
 				9039AD8619E2A6E600D70DD4 /* TaskCellTableViewCell.swift in Sources */,
 				9039AD8819E2A72800D70DD4 /* XingConnection.swift in Sources */,
+				9082356119E2F6590081FC5A /* OAuth2WebViewController.swift in Sources */,
 				9039AD6619E2A69400D70DD4 /* ViewController.swift in Sources */,
+				9082355D19E2F6590081FC5A /* OAuth2.swift in Sources */,
 				904224D419E2B05C0047CA8D /* CRAuthenticationViewController.swift in Sources */,
+				9082355F19E2F6590081FC5A /* OAuth2ImplicitGrant.swift in Sources */,
+				9082356019E2F6590081FC5A /* OAuth2Request.swift in Sources */,
 				9039AD6119E2A69400D70DD4 /* AppDelegate.swift in Sources */,
+				9082355C19E2F6590081FC5A /* extensions.swift in Sources */,
 				904224D719E2B05C0047CA8D /* KeychainService.swift in Sources */,
 				904224D519E2B05C0047CA8D /* CRCredentialsHelper.swift in Sources */,
 				904224D619E2B05C0047CA8D /* CROAuth2Client.swift in Sources */,
+				9082355E19E2F6590081FC5A /* OAuth2CodeGrant.swift in Sources */,
 				9039AD6419E2A69400D70DD4 /* XingConnector.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
