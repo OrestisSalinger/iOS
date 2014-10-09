@@ -20,26 +20,10 @@ class XingConnection: NSObject {
     // visits: /v1/users/:user_id/visits
     var consumerKey = "adc70795cb5ef65405da"
     var consumerSecret = "f44c6af769e899516ca0d3e9fbae92b900f0fd07"
+    var urlXing = "https://api.xing.com/"
+//    var urlXing = "https://api.xing.com/v1/users/:Orestis_Salinger"
     
-    var urlXing = "https://api.xing.com/v1/users/:Orestis_Salinger/visits"
-    
-    //Search iTunes
     func connect(token: String) {
-        
-        //Clean up the search terms by replacing spaces with +
-//        var term = searchTerm.stringByReplacingOccurrencesOfString(" ", withString: "+",
-//            options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
-//        
-        
-        
-        
-//        var escapedSearchTerm = term //.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
-        
-        
-//        var urlPath = urlXing //"http://itunes.apple.com/search?term=\(escapedSearchTerm)&media=music"
-        
-        
-//        var urlPathIMDB = "http://www.imdb.com/xml/find?json=1&nr=1&nm=on&q=\(term)"
         
         var url: NSURL = NSURL(string: urlXing)
         
@@ -49,7 +33,7 @@ class XingConnection: NSObject {
         
         var request: NSURLRequest = NSURLRequest(URL: url)
         
-        println("Request: \(request)")
+        println("Request: \(request.description)")
         
         
         var connection: NSURLConnection = NSURLConnection(request: request, delegate: self,startImmediately: false)
@@ -82,26 +66,27 @@ class XingConnection: NSObject {
     func connection(connection: NSURLConnection!, didReceiveData data: NSData!) {
         //Append incoming data
         self.data.appendData(data)
-        println("...........connection(didReceiveData)")
+        println("...........connection(didReceiveData)\ndataLength: \(data.length)")
         
     }
     
     //NSURLConnection delegate method
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         //Finished receiving data and convert it to a JSON object
+        println("...........connectionDidFinishLoading(NSURLConnection)\ntotal dataLength: \(self.data.length)")
+
         var err: NSError
-   
-        let jsonObject : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)
-        
-        println("JSon: \(jsonObject)\n\n\n\n\n\n\n\n\n\n\n\n\n")
-        
+
+        let jsonObject : AnyObject! = NSJSONSerialization.JSONObjectWithData(self.data, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        println("...........\nTotal data: \( jsonObject)")
         
         if let desc: AnyObject = (((jsonObject as? NSArray)?[0] as? NSDictionary)?["description"] as? NSDictionary)?["description"]{
             println("Description: \(desc)")
             
             
         }
-        
+        println("End ********************")
+
         
         
         
@@ -113,8 +98,11 @@ class XingConnection: NSObject {
     
     func authenticate(){
         // set up the base64-encoded credentials
-        let username = "user"
-        let password = "pass"
+        
+        println("authenticate() .......................+++")
+
+        let username = "multilang"
+        let password = "z7Se2xTg9WN"
         let loginString = NSString(format: "%@:%@", username, password)
         let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
         let base64LoginString = loginData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.fromMask(0))

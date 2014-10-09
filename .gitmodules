@@ -4,3 +4,6 @@
 [submodule "bitfountain/XingConnector/--recursive"]
 	path = bitfountain/XingConnector/--recursive
 	url = git@github.com:crousselle/SwiftOAuth2.git
+[submodule "Alamofire"]
+	path = Alamofire
+	url = https://github.com/Alamofire/Alamofire.git

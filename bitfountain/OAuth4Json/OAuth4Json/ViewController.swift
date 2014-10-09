@@ -28,10 +28,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("I***********viewDidLoad")
 
         
         let oauth = OAuth2CodeGrant(settings: settings)
-        
+
         
         oauth.onAuthorize = { parameters in
             println("Did authorize with parameters: \(parameters)")

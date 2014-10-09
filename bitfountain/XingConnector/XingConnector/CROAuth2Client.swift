@@ -76,11 +76,13 @@ class CROAuth2Client : NSObject {
 
         // We found a token in the keychain, we need to check if it is not expired
         if let optionalStoredAccessToken:NSString? = self.retrieveAccessTokenFromKeychain() {
-//            println("********************************* accessToken: \(optionalStoredAccessToken?.lowercaseString)" )
+            println("\n1 accessToken: \(optionalStoredAccessToken?.lowercaseString)" )
 
             // Token expired, attempt to refresh it
             if (self.isAccessTokenExpired()) {
                 if let refreshToken = self.retrieveRefreshTokenFromKeychain() {
+                    println("\n3 retrieveAuthorizationCode refreshToken: \(token)" )
+
                     self.refreshToken(refreshToken, newToken: token)
                 }
             }
@@ -89,12 +91,14 @@ class CROAuth2Client : NSObject {
                 token(accessToken: optionalStoredAccessToken)
 
             }
-            
+
         }
         else {
+
             // First, let's retrieve the autorization_code by login the user in.
             self.retrieveAuthorizationCode { (authorizationCode) -> Void in
-                
+                println("\n3 retrieveAuthorizationCode: \(authorizationCode)" )
+
                 if let optionalAuthCode = authorizationCode {
                     // We have the authorization_code, we now need to exchange it for the accessToken by doind a POST request
                     let url:String = CROAuth2Client.tokenURL() + "?grant_type=authorization_code" 
@@ -110,7 +114,7 @@ class CROAuth2Client : NSObject {
                         encoding: Alamofire.ParameterEncoding.URL)
                         .responseJSON { (request, response, json, error ) -> Void in   
                             self.postRequestHandler(json, error: error, token: token)
-//                            println("......................url: \(url)" )
+                            println("\n2 url: \(url)" )
                     }
                 }
             }
@@ -122,15 +126,15 @@ class CROAuth2Client : NSObject {
 
     // Retrieves the autorization code by presenting a webView that will let the user login
     private func retrieveAuthorizationCode(authoCode:((authorizationCode:String?) -> Void)) -> Void{
-        
+
         func success(code:String) -> Void {
-            println("SUCCESS AND CODE = " + code)
+            println("\n4 SUCCESS AND CODE = " + code)
             self.sourceViewController?.dismissViewControllerAnimated(true, completion: nil)
             authoCode(authorizationCode:code)
         }
         
         func failure(error:NSError) -> Void {
-            println("ERROR = " + error.description)
+            println("\n5 ERROR = " + error.description)
             self.sourceViewController?.dismissViewControllerAnimated(true, completion: nil)
             authoCode(authorizationCode:nil)
         }
@@ -162,7 +166,7 @@ class CROAuth2Client : NSObject {
                 }   
             }   
         }
-        println("+++++++++++++++++isAccessTokenExpired \(isTokenExpired)" )
+        println("\n6 isAccessTokenExpired \(isTokenExpired)" )
 
         return isTokenExpired
     }
@@ -170,7 +174,7 @@ class CROAuth2Client : NSObject {
     private func retrieveAccessTokenFromKeychain() -> String? {
         
         var key = KeychainService.retrieveStringFromKeychain(kCROAuth2AccessTokenService)
-//        println("+++++++++++++++++retrieveAccessTokenFromKeychain \(key!)" )
+        println("\n7 retrieveAccessTokenFromKeychain \(key!)" )
 
         return key
     }
@@ -179,7 +183,7 @@ class CROAuth2Client : NSObject {
        
         var key = KeychainService.retrieveStringFromKeychain(kCROAuth2RefreshTokenService)
         
-//        println("+++++++++++++++++retrieveRefreshTokenFromKeychain \(key)" )
+        println("\n8 retrieveRefreshTokenFromKeychain \(key)" )
 
         
         return key
@@ -187,9 +191,9 @@ class CROAuth2Client : NSObject {
     
     // Request a new access token with our refresh token
     func refreshToken(refreshToken:String, newToken:((accessToken:String?) -> Void)) -> Void {
-//        println("+++++++++++++++++refreshToken \(refreshToken)" )
+        println("\n9 refreshToken \(refreshToken)" )
 
-        println("Need to refresh the token with refreshToken : " + refreshToken)
+        println("\n10 Need to refresh the token with refreshToken : " + refreshToken)
         
         let url:String = CROAuth2Client.tokenURL() + "?grant_type=refresh_token" 
             + "&client_id=" + CROAuth2Client.clientID()
@@ -208,7 +212,7 @@ class CROAuth2Client : NSObject {
     
     // Extract the accessToken from the JSON response that the authentication server returned
     private func retrieveAccessTokenFromJSONResponse(jsonResponse:AnyObject?) -> String {
-//        println("+++++++++++++++++retrieveAccessTokenFromJSONResponse \(jsonResponse)" )
+        println("\n11 retrieveAccessTokenFromJSONResponse \(jsonResponse)\n" )
 
         var result:String = String()
         
