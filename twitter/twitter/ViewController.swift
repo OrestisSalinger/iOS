@@ -18,11 +18,16 @@ let authorization_header = false
 
 class ViewController: UIViewController {
        override func viewDidLoad() {
-//        println("1 AccessToken:\(TwitterClient.sharedInstance.requestSerializer.accessToken.token)")
+        if(TwitterClient.sharedInstance.requestSerializer.accessToken != nil){
+            println("AccessToken already given:\(TwitterClient.sharedInstance.requestSerializer.accessToken.token)")
+            TwitterClient.sharedInstance.requestSerializer.removeAccessToken()
+        }else{
+            println("No access token given so far.")
+        }
+        
+
 
         super.viewDidLoad()
-//        TwitterClient.sharedInstance.requestSerializer.removeAccessToken()
-//        println("2 AccessToken:\(TwitterClient.sharedInstance.requestSerializer.accessToken.token)")
 
     
     }
@@ -45,12 +50,8 @@ class ViewController: UIViewController {
             scope: "https://api.xing.com",
             success: { (requestToken: BDBOAuthToken!) -> Void in
                 println("Got the request token: \(requestToken)")
-                
                 var authUrl = NSURL(string: "https://api.xing.com/v1/authorize?oauth_token=\(requestToken.token)")
                 UIApplication.sharedApplication().openURL(authUrl)
-                
-
-                
             })
             { (error: NSError!) -> Void in
                 println("\n!!! Failed to get the request token!!!\n\n\n")

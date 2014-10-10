@@ -50,11 +50,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             success: { (accessToken: BDBOAuthToken! ) -> Void in
                             println("Got the access token: \(accessToken)")
                             TwitterClient.sharedInstance.requestSerializer.saveAccessToken(accessToken)
-                TwitterClient.sharedInstance.GET("/v1/users/orestis_salinger", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response:AnyObject!) -> Void in
+                            TwitterClient.sharedInstance.GET("/v1/users/orestis_salinger/visits", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response:AnyObject!) -> Void in
                                 println("User: \(response)")
                     }, failure: { (operation: AFHTTPRequestOperation!,error: NSError!) -> Void in
                                 println("Error: \(error)")
-                })
+                            })
                 
                 
                 
