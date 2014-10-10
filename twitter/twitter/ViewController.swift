@@ -18,7 +18,11 @@ let authorization_header = false
 
 class ViewController: UIViewController {
        override func viewDidLoad() {
+//        println("1 AccessToken:\(TwitterClient.sharedInstance.requestSerializer.accessToken.token)")
+
         super.viewDidLoad()
+//        TwitterClient.sharedInstance.requestSerializer.removeAccessToken()
+//        println("2 AccessToken:\(TwitterClient.sharedInstance.requestSerializer.accessToken.token)")
 
     
     }
@@ -34,35 +38,22 @@ class ViewController: UIViewController {
     
     
     @IBAction func onLogin(sender: UIButton) {
-        
         TwitterClient.sharedInstance.fetchRequestTokenWithPath(
             "/v1/request_token",
             method: "GET",
-            callbackURL: NSURL(string: "http://localhost:8080/bla"),
+            callbackURL: NSURL(string: "cptwitterdemo://authenticate/xing/"),
             scope: "https://api.xing.com",
             success: { (requestToken: BDBOAuthToken!) -> Void in
                 println("Got the request token: \(requestToken)")
                 
-                var authUrl = NSURL(string: "https://api.xing.com/v1/authorize")
+                var authUrl = NSURL(string: "https://api.xing.com/v1/authorize?oauth_token=\(requestToken.token)")
                 UIApplication.sharedApplication().openURL(authUrl)
                 
-                
-                
-                TwitterClient.sharedInstance.fetchAccessTokenWithPath(
-                    "/v1/access_token",
-                    method: "GET",
-                    requestToken: requestToken,
-                    success: { (accessToken ) -> Void in
-                        println("Got the access token: \(accessToken)")
-                })
-                { (error: NSError!) -> Void in
-                        println("Failed to get the access token \(error)")
-                }
 
                 
             })
             { (error: NSError!) -> Void in
-                println("Failed to get the request token")
+                println("\n!!! Failed to get the request token!!!\n\n\n")
             }
     }
 }

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-let tConsumerKey = "0d9ae6b97c933d027942"
-let tConsumerSecret = "f1d457ed7b97f1dfa525f41d991eed7b9d712aed"
+let tConsumerKey = "c571770851588f4748f6"
+let tConsumerSecret = "7b1510d4a3bef9599110fbb4b730948db8932592"
 let tBaseUrl = NSURL(string: "https://api.xing.com")
 
 class TwitterClient: BDBOAuth1RequestOperationManager {
