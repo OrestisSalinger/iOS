@@ -43,15 +43,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
         
-        TwitterClient.sharedInstance.fetchAccessTokenWithPath(
+        XingClient.sharedInstance.fetchAccessTokenWithPath(
                             "/v1/access_token",
                             method: "POST",
                             requestToken: BDBOAuthToken(queryString: url.query),
             success: { (accessToken: BDBOAuthToken! ) -> Void in
                             println("Got the access token: \(accessToken)")
-                            TwitterClient.sharedInstance.requestSerializer.saveAccessToken(accessToken)
-                            TwitterClient.sharedInstance.GET("/v1/users/orestis_salinger/visits", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response:AnyObject!) -> Void in
-                                println("User: \(response)")
+                            XingClient.sharedInstance.requestSerializer.saveAccessToken(accessToken)
+                            XingClient.sharedInstance.GET("/v1/users/orestis_salinger/visits", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response:AnyObject!) -> Void in
+                                XingClient.sharedInstance.response = response
+
+                                let dict = response as Dictionary<String, AnyObject>
+                                
+                                println("Dict: \(dict)")
+                                
+                                let visits : AnyObject? = dict["visits"]
+                                
+                                let collection = visits! as Array<Dictionary<String, AnyObject>>
+                               
+                                for visit in collection {
+                                    let display_name : AnyObject? = visit["display_name"]
+                                    let company_name : AnyObject? = visit["company_name"]
+                                    let reason : AnyObject? = visit["reason"]?["text"]
+                                    let photo_medium_url : AnyObject? = visit["photo_urls"]?["medium_thumb"]
+                                    let visited_at : AnyObject? = visit["visited_at"]
+                                    
+                                    println("_______________\n\nName: \(display_name!)")
+                                    println("Company: \(company_name!)")
+                                    println("Picture: \(photo_medium_url!)")
+                                    println("Date: \(visited_at!)")
+                                    println("Reason: \(reason!)\n_______________\n\n")
+                                }
                     }, failure: { (operation: AFHTTPRequestOperation!,error: NSError!) -> Void in
                                 println("Error: \(error)")
                             })
@@ -65,6 +87,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
             return true
     }
+    
+    func jsonResponse() -> [String : AnyObject] {
+        let path = NSBundle.mainBundle().pathForResource("data", ofType: "json")
+        let data = NSData.dataWithContentsOfFile(path!, options: NSDataReadingOptions.DataReadingUncached, error: nil)
+        
+        let json: AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        return json as [String : AnyObject]
+    }
+
+    
 
 }
 
