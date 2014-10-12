@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
         return true
     }
 
@@ -30,10 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
+            
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
+        println("++++++++++++++ applicationDidBecomeActive")
+
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
@@ -42,38 +46,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
-        
+        println("*********************** application 2")
+
         XingClient.sharedInstance.fetchAccessTokenWithPath(
                             "/v1/access_token",
                             method: "POST",
-                            requestToken: BDBOAuthToken(queryString: url.query),
-            success: { (accessToken: BDBOAuthToken! ) -> Void in
+                            requestToken: BDBOAuthToken(queryString: url.query), success: { (accessToken: BDBOAuthToken! ) -> Void in
                             println("Got the access token: \(accessToken)")
                             XingClient.sharedInstance.requestSerializer.saveAccessToken(accessToken)
                             XingClient.sharedInstance.GET("/v1/users/orestis_salinger/visits", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response:AnyObject!) -> Void in
-                                XingClient.sharedInstance.response = response
 
                                 let dict = response as Dictionary<String, AnyObject>
-                                
-                                println("Dict: \(dict)")
+
                                 
                                 let visits : AnyObject? = dict["visits"]
+                                let vc = LoginViewController(nibName: "LoginView", bundle: nil)
+                                vc.didRecieveResponse(dict as NSDictionary)
                                 
-                                let collection = visits! as Array<Dictionary<String, AnyObject>>
-                               
-                                for visit in collection {
-                                    let display_name : AnyObject? = visit["display_name"]
-                                    let company_name : AnyObject? = visit["company_name"]
-                                    let reason : AnyObject? = visit["reason"]?["text"]
-                                    let photo_medium_url : AnyObject? = visit["photo_urls"]?["medium_thumb"]
-                                    let visited_at : AnyObject? = visit["visited_at"]
-                                    
-                                    println("_______________\n\nName: \(display_name!)")
-                                    println("Company: \(company_name!)")
-                                    println("Picture: \(photo_medium_url!)")
-                                    println("Date: \(visited_at!)")
-                                    println("Reason: \(reason!)\n_______________\n\n")
-                                }
+                                
+                                
+                                                               
                     }, failure: { (operation: AFHTTPRequestOperation!,error: NSError!) -> Void in
                                 println("Error: \(error)")
                             })
@@ -84,19 +76,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         { (error: NSError!) -> Void in
                                 println("Failed to get the access token \(error)")
                         }
-        
             return true
     }
+  
     
-    func jsonResponse() -> [String : AnyObject] {
-        let path = NSBundle.mainBundle().pathForResource("data", ofType: "json")
-        let data = NSData.dataWithContentsOfFile(path!, options: NSDataReadingOptions.DataReadingUncached, error: nil)
-        
-        let json: AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)
-        return json as [String : AnyObject]
-    }
+    
 
-    
 
 }
 

@@ -5,71 +5,75 @@
 //  Created by Orestis Salinger on 09.10.14.
 //  Copyright (c) 2014 Orestis Salinger. All rights reserved.
 //
-//  Additional Sources:
-
-//TODO checkout https://github.com/xing/XNGOAuth1Client/tree/master/XNGOAuth1Client
-//as done with BDBOAuth1Manager in http://www.sososwift.com/posts/swift-programming-ios-app-basic-twitter-oauth-walkthrough or https://github.com/xing/XNGAPIClient
-
-
-
-
-
-
-
 import UIKit
 
-let oauth_version = "1.0a"
-let request_token_path = "/v1/request_token"
-let callback_url = "cptwitterdemo://authenticate/xing/"
-let authorize_path = "https://api.xing.com/v1/authorize?oauth_token="
-
-let access_token_path = "/v1/access_token"
-let authorization_header = false
-let scope = "https://api.xing.com"
-
-
-class ViewController: UIViewController {
-       override func viewDidLoad() {
-        if(XingClient.sharedInstance.requestSerializer.accessToken != nil){
-            println("AccessToken already given:\(XingClient.sharedInstance.requestSerializer.accessToken.token)")
-            XingClient.sharedInstance.requestSerializer.removeAccessToken()
-        }else{
-            println("No access token given so far.")
-        }
-        
-
-
-        super.viewDidLoad()
-
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let xingClient = XingClient.sharedInstance
+    var api: XingSearchAPI = XingSearchAPI()
+    var tableData: NSArray = NSArray()
+    var visitorDatas:[VisitorData] = []
+    var response:Array<Dictionary<String, AnyObject>>?
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        println("********** onTableView")
+//        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "visitorCell")
+
+        
+        visitorDatas = xingClient.visitorDatas
+    }
+
+
+
+    //    UITableViewDataSource
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = XingVisitorCell();
+            println(" count: \(visitorDatas.count)")
+        var visitorDatasLocal:[VisitorData] = []
+        var visit: VisitorData = VisitorData()
+        
+        if(visitorDatas.count > 0){
+            visitorDatasLocal = visitorDatas
+            visit = visitorDatas[indexPath.row]//.removeAtIndex(0)
+            println("image url: \(visit.photoURL)" )
+            
+            
+            cell = tableView.dequeueReusableCellWithIdentifier("visitorCell") as XingVisitorCell
+            cell.name.text = visit.name
+            cell.companyName.text = visit.companyName
+            cell.reason.text = visit.reason
+            cell.visitCount.text = visit.visitCount
+            cell.visitDate.text = visit.visitDate
+
+            
+            let url = NSURL.URLWithString(visit.photoURL);
+            var err: NSError?
+            var imageData :NSData = NSData.dataWithContentsOfURL(url,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
+            var image = UIImage(data:imageData)
+            cell.visitorPicture.image = image
+            if(indexPath.row%2 != 0) {
+                cell.backgroundColor = UIColor.grayColor()
+            }
+        }
+        return cell
+    }
+    
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        println("************ Table Rows: \(response)")
+        return visitorDatas.count
+    }
+    
+    //    UITableViewDelegate
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    
-    
-    @IBAction func onLogin(sender: UIButton) {
-        //TODO
-//        TwitterClient.sharedInstance.loginWithBlock()
-//        goto next screen
-           XingClient.sharedInstance.fetchRequestTokenWithPath(
-            request_token_path,
-            method: "GET",
-            callbackURL: NSURL(string: callback_url),
-            scope: scope,
-            success: { (requestToken: BDBOAuthToken!) -> Void in
-                println("Got the request token: \(requestToken)")
-                var authUrl = NSURL(string: "\(authorize_path)\(requestToken.token)")
-                UIApplication.sharedApplication().openURL(authUrl)
-                
-            })
-            { (error: NSError!) -> Void in
-                println("\n!!! Failed to get the request token!!!\n\n\n")
-            }
-    }
 }
-
-
-

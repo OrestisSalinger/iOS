@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		8B4B55EAD8E89449B0E4F3BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9D53D7CB7BC5F389873372 /* libPods.a */; };
 		907A05EE19E80E380094777F /* XingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907A05ED19E80E380094777F /* XingClient.swift */; };
+		90B3A36A19EA9EF600706FB2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B3A36919EA9EF600706FB2 /* LoginViewController.swift */; };
 		90C939B319E6F7B100B279D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C939B219E6F7B100B279D6 /* AppDelegate.swift */; };
 		90C939B519E6F7B100B279D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C939B419E6F7B100B279D6 /* ViewController.swift */; };
 		90C939B819E6F7B100B279D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C939B619E6F7B100B279D6 /* Main.storyboard */; };
 		90C939BA19E6F7B100B279D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C939B919E6F7B100B279D6 /* Images.xcassets */; };
 		90C939BD19E6F7B100B279D6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C939BB19E6F7B100B279D6 /* LaunchScreen.xib */; };
 		90C939C919E6F7B100B279D6 /* TwitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C939C819E6F7B100B279D6 /* TwitterTests.swift */; };
+		90D8054719E852AE005F3E36 /* XingVisitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D8054619E852AE005F3E36 /* XingVisitorCell.swift */; };
+		90D8054B19E860F7005F3E36 /* XingSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D8054A19E860F7005F3E36 /* XingSearchAPI.swift */; };
+		90D8054D19E8616D005F3E36 /* VisitorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D8054C19E8616D005F3E36 /* VisitorData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,7 @@
 		5C9D53D7CB7BC5F389873372 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8550A605AF8BD16BAE242935 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		907A05ED19E80E380094777F /* XingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XingClient.swift; sourceTree = "<group>"; };
+		90B3A36919EA9EF600706FB2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		90C939AD19E6F7B100B279D6 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C939B119E6F7B100B279D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C939B219E6F7B100B279D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +48,9 @@
 		90C939C719E6F7B100B279D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C939C819E6F7B100B279D6 /* TwitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterTests.swift; sourceTree = "<group>"; };
 		90C939D219E6F90A00B279D6 /* Twitter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Twitter-Bridging-Header.h"; sourceTree = "<group>"; };
+		90D8054619E852AE005F3E36 /* XingVisitorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XingVisitorCell.swift; sourceTree = "<group>"; };
+		90D8054A19E860F7005F3E36 /* XingSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XingSearchAPI.swift; sourceTree = "<group>"; };
+		90D8054C19E8616D005F3E36 /* VisitorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +96,11 @@
 		90C939AF19E6F7B100B279D6 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				90D8054619E852AE005F3E36 /* XingVisitorCell.swift */,
 				90C939D519E6F9A000B279D6 /* API */,
 				90C939B219E6F7B100B279D6 /* AppDelegate.swift */,
 				90C939B419E6F7B100B279D6 /* ViewController.swift */,
+				90B3A36919EA9EF600706FB2 /* LoginViewController.swift */,
 				90C939B619E6F7B100B279D6 /* Main.storyboard */,
 				90C939B919E6F7B100B279D6 /* Images.xcassets */,
 				90C939BB19E6F7B100B279D6 /* LaunchScreen.xib */,
@@ -128,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				907A05ED19E80E380094777F /* XingClient.swift */,
+				90D8054A19E860F7005F3E36 /* XingSearchAPI.swift */,
+				90D8054C19E8616D005F3E36 /* VisitorData.swift */,
 			);
 			name = API;
 			path = ..;
@@ -201,6 +213,11 @@
 				TargetAttributes = {
 					90C939AC19E6F7B100B279D6 = {
 						CreatedOnToolsVersion = 6.0.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					90C939C119E6F7B100B279D6 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -285,8 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B3A36A19EA9EF600706FB2 /* LoginViewController.swift in Sources */,
+				90D8054B19E860F7005F3E36 /* XingSearchAPI.swift in Sources */,
+				90D8054D19E8616D005F3E36 /* VisitorData.swift in Sources */,
 				907A05EE19E80E380094777F /* XingClient.swift in Sources */,
 				90C939B519E6F7B100B279D6 /* ViewController.swift in Sources */,
+				90D8054719E852AE005F3E36 /* XingVisitorCell.swift in Sources */,
 				90C939B319E6F7B100B279D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
