@@ -31,36 +31,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //    UITableViewDataSource
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = XingVisitorCell();
-            println(" count: \(visitorDatas.count)")
         var visitorDatasLocal:[VisitorData] = []
         var visit: VisitorData = VisitorData()
         
         if(visitorDatas.count > 0){
             visitorDatasLocal = visitorDatas
-            visit = visitorDatas[indexPath.row]//.removeAtIndex(0)
-            println("image url: \(visit.photoURL)" )
-            
-            
+            visit = visitorDatas[indexPath.row]
             cell = tableView.dequeueReusableCellWithIdentifier("visitorCell") as XingVisitorCell
             cell.name.text = visit.name
             cell.companyName.text = visit.companyName
             cell.reason.text = visit.reason
-            cell.visitCount.text = visit.visitCount
-            cell.visitDate.text = visit.visitDate
-
-            
-            let url = NSURL.URLWithString(visit.photoURL);
+            cell.visitCount.text = visit.visitCount + ". visit"
+            cell.visitDate.text = "on " + visit.visitDate
+            var url:NSURL
+            if(!visit.photoURL.isEmpty){
+                url = NSURL.URLWithString(visit.photoURL);
+            }else{
+                url = NSURL.URLWithString("http://us.tintin.com/wp-content/uploads/2011/10/characters-rastapopoulos-sm.jpg");
+                
+            }
             var err: NSError?
             var imageData :NSData = NSData.dataWithContentsOfURL(url,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
             var image = UIImage(data:imageData)
             cell.visitorPicture.image = image
-            if(indexPath.row%2 != 0) {
-                cell.backgroundColor = UIColor.grayColor()
-            }
+            
         }
         return cell
     }
-    
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

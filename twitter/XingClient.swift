@@ -19,7 +19,6 @@ let scope = "https://api.xing.com"
 class XingClient: BDBOAuth1RequestOperationManager {
     var response:Array<Dictionary<String, AnyObject>>?
     var visitorDatas:[VisitorData] = []
-
     
     class var sharedInstance: XingClient {
         struct Static {
@@ -57,6 +56,108 @@ class XingClient: BDBOAuth1RequestOperationManager {
         }
     }
     
-
     
+    
+    func persist(visitor: VisitorData)->Bool{
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(visitor.name, forKey: "lastXingVisitor")
+        //        userDefaults.synchronize()
+        return true
+    }
+    
+    func readLastVisitorFromFS()-> String{
+        var result:String = ""
+        if let userDefaults = NSUserDefaults.standardUserDefaults() as NSUserDefaults?{
+            if let visitorData : AnyObject = userDefaults.objectForKey("lastXingVisitor") {
+                result = visitorData as String
+            }
+        }
+        return result
+    }
+
+    func extractVisitorsFromDict(results: NSDictionary)-> [VisitorData]{
+        var visitorDatas:[VisitorData] = []
+        if results.count > 0 {
+            let dict = results as Dictionary<String, AnyObject>
+            let visits : AnyObject? = dict["visits"]
+            let collection = visits! as Array<Dictionary<String, AnyObject>>
+            for visit in collection {
+                if isDataGiven(visit){
+                    visitorDatas.append(extractToVisitorData(visit))
+                }else {
+                    visitorDatas.append(extractDateToDummyVisitorData(visit))
+                }
+            }
+        }
+        if(!isPersisted()){
+            persist(visitorDatas[0])
+        }else{
+            if isNewLastVisitor(visitorDatas[0]){
+                //persist(visitorDatas[0])
+                println("New Last Visitor \(visitorDatas[0])")
+            }else{
+                println("No New Last Visitor \(visitorDatas[0])")
+            }
+        }
+        return visitorDatas
+    }
+
+    func extractToVisitorData(visit: Dictionary<String, AnyObject>) -> VisitorData{
+        let display_name : AnyObject? = visit["display_name"]
+        let company_name : AnyObject? = visit["company_name"]
+        var reason : AnyObject? = visit["reason"]?["text"]
+        let photo_medium_url : AnyObject? = visit["photo_urls"]?["maxi_thumb"]
+        let visited_at : AnyObject? = visit["visited_at"]
+        let visit_count : AnyObject! = visit["visit_count"]
+        var data = VisitorData()
+        reason = filterReason(reason!)
+        data.name = display_name as String
+        data.companyName = company_name as String
+        data.visitDate = visited_at as String
+        data.reason = reason as String
+        data.visitCount = "\(visit_count)"
+        data.photoURL = photo_medium_url as String
+        visitorDatas.append(data)
+        return data
+    }
+
+    func extractDateToDummyVisitorData(visit: Dictionary<String, AnyObject>) -> VisitorData{
+        let dummyString = "Not a Member."
+        let visited_at : AnyObject? = visit["visited_at"]
+        var data = VisitorData()
+        data.name = dummyString
+        data.companyName = ""
+        data.visitDate = visited_at as String
+        data.reason = ""
+        data.visitCount = ""
+        data.photoURL = ""
+        visitorDatas.append(data)
+        return data
+    }
+    
+    func isPersisted() -> Bool{
+        return readLastVisitorFromFS() != ""
+    }
+    
+    func isNewLastVisitor(data: VisitorData)-> Bool{
+        return readLastVisitorFromFS() != data.name
+    }
+    
+    func isDataGiven(visit: AnyObject)-> Bool{
+        return (visit["display_name"] as NSObject != NSNull())
+    }
+    
+    func filterReason(reason: AnyObject)->String{
+        if(reason as NSObject == NSNull()){
+            return ""
+        }
+        if (reason.lowercaseString.rangeOfString("talentmanager") != nil) {
+            return "Talentmanager"
+        }else if (reason.lowercaseString.rangeOfString("contacts/recommendations") != nil) {
+            return "Recommended by XING"
+        }else{
+            return ""
+        }
+    }
+
 }
