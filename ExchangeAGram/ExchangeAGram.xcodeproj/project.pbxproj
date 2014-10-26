@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90262E9019FC095F003A27C0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90262E8F19FC095F003A27C0 /* FilterViewController.swift */; };
 		90BDB48F19F4046E001761D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BDB48E19F4046E001761D7 /* AppDelegate.swift */; };
 		90BDB49219F4046E001761D7 /* ExchangeAGram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90BDB49019F4046E001761D7 /* ExchangeAGram.xcdatamodeld */; };
 		90BDB49719F4046E001761D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90BDB49519F4046E001761D7 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90262E8F19FC095F003A27C0 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		90928CC519F56C61009FA919 /* ExchangeAGram.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ExchangeAGram.entitlements; sourceTree = "<group>"; };
 		90BDB48919F4046E001761D7 /* ExchangeAGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeAGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BDB48D19F4046E001761D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		90BDB48B19F4046E001761D7 /* ExchangeAGram */ = {
 			isa = PBXGroup;
 			children = (
+				90262E8F19FC095F003A27C0 /* FilterViewController.swift */,
 				90928CC519F56C61009FA919 /* ExchangeAGram.entitlements */,
 				90BDB4B319F40F57001761D7 /* FeedCell.swift */,
 				90BDB48E19F4046E001761D7 /* AppDelegate.swift */,
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90262E9019FC095F003A27C0 /* FilterViewController.swift in Sources */,
 				90BDB48F19F4046E001761D7 /* AppDelegate.swift in Sources */,
 				90BDB4B419F40F57001761D7 /* FeedCell.swift in Sources */,
 				90BDB4B219F40AD3001761D7 /* FeedViewController.swift in Sources */,

@@ -15,10 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var newVisitor: Bool = false
     var lastVisitor: VisitorData?
     var visitorDatas:[VisitorData] = []
-
+    var timer:NSTimer!
+    var urlXing:NSURL!
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-
         return true
     }
 
@@ -31,12 +32,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidEnterBackground(application: UIApplication) {
         println("++++++++++++++ applicationDidEnterBackground")
-               
+//        App enters background now
+//        TODO: implement counter functionallity for calling 
+        
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
+    func update() {
+        println("TIMER EVENT")
+        connectToXing(urlXing)
+
+    }
+    
+    
     func applicationWillEnterForeground(application: UIApplication) {
         println("++++++++++++++ applicationWillEnterForeground")
         
@@ -44,6 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
+        if timer != nil{
+            timer.invalidate()
+        }
         println("++++++++++++++ applicationDidBecomeActive")
 
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
@@ -57,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
         println("++++++++++++++ application")
-
+        self.urlXing = url
         connectToXing(url)
         
         return true
@@ -65,6 +80,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func connectToXing(url: NSURL) ->Bool{
         println("Connecting to Xing.")
+        if XingClient.sharedInstance.requestSerializer.accessToken != nil {
+            
+//            let requestToken: BDBOAuthToken = XingClient.sharedInstance.requestSerializer.requestToken
+            
+            
+//            let accessToken: BDBOAuthToken = XingClient.sharedInstance.requestSerializer.accessToken
+
+            
+            println("\n\nACCESS TOKEN ALREADY EXIST\n\n")
+            XingClient.sharedInstance.GET("/v1/users/orestis_salinger/visits", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response:AnyObject!) -> Void in
+                let dict = response as Dictionary<String, AnyObject>
+                let visits : AnyObject? = dict["visits"]
+                let vc = LoginViewController(nibName: "LoginView", bundle: nil)
+                vc.didRecieveResponse(XingClient.sharedInstance.extractVisitorsFromDict(dict as NSDictionary))
+                }, failure: { (operation: AFHTTPRequestOperation!,error: NSError!) -> Void in
+                    println("Error: \(error)")
+            })
+
+
+        }else{
+            println("ACCESS TOKEN DOES NOT EXIST")
+
         XingClient.sharedInstance.fetchAccessTokenWithPath(
             "/v1/access_token",
             method: "POST",
@@ -83,10 +120,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             { (error: NSError!) -> Void in
                 println("Failed to get the access token \(error)")
         }
+        }
         return true
     }
     
-
     
+
 }
 

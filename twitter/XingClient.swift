@@ -41,6 +41,10 @@ class XingClient: BDBOAuth1RequestOperationManager {
     }
     
     func login() {
+        println("LOGGING IN")
+        if XingClient.sharedInstance.requestSerializer.requestToken == nil{
+            println("NO REQUEST TOKEN GIVEN")
+            removeAccessTokenIfGiven()
         XingClient.sharedInstance.fetchRequestTokenWithPath(
             request_token_path,
             method: "GET",
@@ -49,10 +53,11 @@ class XingClient: BDBOAuth1RequestOperationManager {
             success: { (requestToken: BDBOAuthToken!) -> Void in
                 println("Got the request token: \(requestToken)")
                 var authUrl = NSURL(string: "\(authorize_path)\(requestToken.token)")
-                UIApplication.sharedApplication().openURL(authUrl)
+                UIApplication.sharedApplication().openURL(authUrl!)
                 println("Opened URL: \(authUrl)")})
             {(error: NSError!) -> Void in
                 println("\n!!! Failed to get the request token!!!\n\n\n")
+        }
         }
     }
     
@@ -60,7 +65,9 @@ class XingClient: BDBOAuth1RequestOperationManager {
     
     func persist(visitor: VisitorData)->Bool{
         let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(visitor.name, forKey: "lastXingVisitor")
+        userDefaults.setObject(visitor.name, forKey: "lastXingVisitor.name")
+        userDefaults.setObject(visitor.visitDate, forKey: "lastXingVisitor.visitDate")
+
         //        userDefaults.synchronize()
         return true
     }
@@ -68,8 +75,11 @@ class XingClient: BDBOAuth1RequestOperationManager {
     func readLastVisitorFromFS()-> String{
         var result:String = ""
         if let userDefaults = NSUserDefaults.standardUserDefaults() as NSUserDefaults?{
-            if let visitorData : AnyObject = userDefaults.objectForKey("lastXingVisitor") {
-                result = visitorData as String
+            if let visitorName : AnyObject = userDefaults.objectForKey("lastXingVisitor.name"){
+                let vn: AnyObject = visitorName
+                if let visitorDate : AnyObject = userDefaults.objectForKey("lastXingVisitor.visitDate"){
+                    result = "\(vn)_\(visitorDate)"
+                }
             }
         }
         return result
@@ -93,10 +103,10 @@ class XingClient: BDBOAuth1RequestOperationManager {
             persist(visitorDatas[0])
         }else{
             if isNewLastVisitor(visitorDatas[0]){
-                //persist(visitorDatas[0])
-                println("New Last Visitor \(visitorDatas[0])")
+                persist(visitorDatas[0])
+                println("New Last Visitor \(visitorDatas[0].name)")
             }else{
-                println("No New Last Visitor \(visitorDatas[0])")
+                println("No New Last Visitor \(visitorDatas[0].name)")
             }
         }
         return visitorDatas
@@ -140,7 +150,10 @@ class XingClient: BDBOAuth1RequestOperationManager {
     }
     
     func isNewLastVisitor(data: VisitorData)-> Bool{
-        return readLastVisitorFromFS() != data.name
+        println("IS NEW FS: \(readLastVisitorFromFS())" )
+        println("IS NEW FS: \(data.name)_\(data.visitDate)" )
+
+        return readLastVisitorFromFS() != "\(data.name)_\(data.visitDate)"
     }
     
     func isDataGiven(visit: AnyObject)-> Bool{
@@ -156,8 +169,21 @@ class XingClient: BDBOAuth1RequestOperationManager {
         }else if (reason.lowercaseString.rangeOfString("contacts/recommendations") != nil) {
             return "Recommended by XING"
         }else{
-            return ""
+            return reason as String
         }
     }
-
+    
+    func refresh(){
+        println("XING CLIENT REFRESHING")
+        self.GET("/v1/users/orestis_salinger/visits", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response:AnyObject!) -> Void in
+            let dict = response as Dictionary<String, AnyObject>
+            let visits : AnyObject? = dict["visits"]
+            let vc = LoginViewController(nibName: "LoginView", bundle: nil)
+            vc.didRecieveResponse(XingClient.sharedInstance.extractVisitorsFromDict(dict as NSDictionary))
+            
+            }, failure: { (operation: AFHTTPRequestOperation!,error: NSError!) -> Void in
+                println("Error: \(error)")
+        })
+    
+    }
 }

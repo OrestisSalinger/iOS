@@ -25,11 +25,11 @@ class XingSearchAPI: NSObject {
         var escapedSearchTerm = itunesSearchTerm //.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
         var urlPath = "http://itunes.apple.com/search?term=\(escapedSearchTerm)&media=music"
         var urlPathIMDB = "http://www.imdb.com/xml/find?json=1&nr=1&nm=on&q=\(itunesSearchTerm)"
-        var url: NSURL = NSURL(string: urlPathIMDB)
+        var url: NSURL = NSURL(string: urlPathIMDB)!
         println("Search iTunes API at URL \(urlPath)")
         var request: NSURLRequest = NSURLRequest(URL: url)
         println("Request: \(request)")
-        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self,startImmediately: false)
+        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self,startImmediately: false)!
         println("...........Starting connection")
         connection.start()
         println("...........Connection has started")

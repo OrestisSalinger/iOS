@@ -22,7 +22,7 @@ class LoginViewController: UIViewController, XingSearchAPIProtocol{
     
     @IBAction func onLogin(sender: AnyObject) {
         println("********** onLogin")
-        xingClient.removeAccessTokenIfGiven()
+//        xingClient.removeAccessTokenIfGiven()
         xingClient.login()
         println("********** Logged in")
         

@@ -45,17 +45,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.visitDate.text = "on " + visit.visitDate
             var url:NSURL
             if(!visit.photoURL.isEmpty){
-                url = NSURL.URLWithString(visit.photoURL);
+                url = NSURL(string: visit.photoURL)!;
             }else{
-                url = NSURL.URLWithString("http://us.tintin.com/wp-content/uploads/2011/10/characters-rastapopoulos-sm.jpg");
+                url = NSURL(string: "http://www.tintinboutique.com/media/catalog/product/big/product_1046_1.jpg")!;
                 
             }
             var err: NSError?
-            var imageData :NSData = NSData.dataWithContentsOfURL(url,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
+            var imageData :NSData = NSData(contentsOfURL: url,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)!
             var image = UIImage(data:imageData)
             cell.visitorPicture.image = image
             
         }
+        cell.backgroundColor = UIColor.whiteColor()
         return cell
     }
     
@@ -73,4 +74,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func onPressRefresh(sender: UIButton) {
+        println("REFRESH PRESSED")
+        xingClient.refresh()
+    }
+
+    
+    
 }
+
