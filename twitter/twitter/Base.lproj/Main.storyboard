@@ -12,16 +12,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="WiS-wP-LSi">
-                                <rect key="frame" x="178" y="354" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                             <navigationBar contentMode="scaleToFill" id="xJF-5h-zkP">
                                 <rect key="frame" x="0.0" y="620" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="KiZ-6P-TPr">
-                                        <barButtonItem key="rightBarButtonItem" title="Login to XING" id="0Z7-Sh-rOp">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="0Z7-Sh-rOp">
                                             <connections>
                                                 <action selector="onLogin:" destination="seD-nj-ygu" id="ZvH-FV-5WI"/>
                                             </connections>
@@ -51,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwe-hT-ina" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-254.40000000000001" y="97.269999999999996"/>
+            <point key="canvasLocation" x="-255" y="97"/>
         </scene>
         <!--TableView-->
         <scene sceneID="ufC-wZ-h7g">

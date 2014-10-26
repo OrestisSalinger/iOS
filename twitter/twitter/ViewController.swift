@@ -78,6 +78,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func onPressRefresh(sender: UIButton) {
         println("REFRESH PRESSED")
         xingClient.refresh()
+        self.tableView.reloadData()
     }
 
     

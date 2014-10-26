@@ -15,6 +15,9 @@ let callback_url = "cptwitterdemo://authenticate/xing/"
 let authorize_path = "https://api.xing.com/v1/authorize?oauth_token="
 let access_token_path = "/v1/access_token"
 let scope = "https://api.xing.com"
+var user:String!
+var pass:String!
+
 
 class XingClient: BDBOAuth1RequestOperationManager {
     var response:Array<Dictionary<String, AnyObject>>?
@@ -43,7 +46,8 @@ class XingClient: BDBOAuth1RequestOperationManager {
     func login() {
         println("LOGGING IN")
         if XingClient.sharedInstance.requestSerializer.requestToken == nil{
-            println("NO REQUEST TOKEN GIVEN")
+            
+            println("NO REQUEST TOKEN GIVEN logging in: \(user):\(pass)")
             removeAccessTokenIfGiven()
         XingClient.sharedInstance.fetchRequestTokenWithPath(
             request_token_path,
@@ -155,8 +159,8 @@ class XingClient: BDBOAuth1RequestOperationManager {
 
         println("IS NEW PERSISTED: \(readLastVisitorFromFS())" )
         println("IS NEW FRESH: \(lastVisit)" )
-//        return readLastVisitorFromFS() != lastVisit
-        return true
+        return readLastVisitorFromFS() != lastVisit
+//        return true
     }
     
     func isDataGiven(visit: AnyObject)-> Bool{
@@ -175,6 +179,18 @@ class XingClient: BDBOAuth1RequestOperationManager {
             return reason as String
         }
     }
+    
+    func sendMessageToMember(){
+       let urlString = "/v1/users/orestis_salinger/conversations?subject=What&content=Can%20you%20tell%20me%3F&recipient_ids=Andreas_Schoenberg4"
+        self.POST(urlString, parameters: nil, success: { (operation:AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+                println("... \(response)")
+            }, failure: { (operation: AFHTTPRequestOperation!,error: NSError!) -> Void in
+                println("Error: \(error)")
+        
+        })
+        
+    }
+    
     
     func refresh(){
         println("XING CLIENT REFRESHING")

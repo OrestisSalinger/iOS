@@ -10,6 +10,8 @@ import UIKit
 class LoginViewController: UIViewController, XingSearchAPIProtocol{
     
     @IBOutlet weak var visitButton: UIButton!
+    
+    
     let xingClient = XingClient.sharedInstance
     var api: XingSearchAPI = XingSearchAPI()
     var visitorDatas:[VisitorData] = []
@@ -20,20 +22,26 @@ class LoginViewController: UIViewController, XingSearchAPIProtocol{
         onLogin(UIButton())
     }
     
+    
     @IBAction func onLogin(sender: AnyObject) {
         println("********** onLogin")
-//        xingClient.removeAccessTokenIfGiven()
         xingClient.login()
         println("********** Logged in")
         
         let vc2 = ViewController(nibName: "TableView", bundle: nil)
         navigationController?.pushViewController(vc2, animated: true)
+        
+
     }
     
     func didRecieveResponse(visitorDatas:[VisitorData]) {
+        println("********** didRecieveResponse")
+
         self.visitorDatas = visitorDatas
         xingClient.visitorDatas = self.visitorDatas
-
+        
+        
+        
     }
     
    

@@ -60,11 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             localNotification.alertBody = "New visitor on XING: \(XingClient.sharedInstance.visitorDatas[0].name)"
             localNotification.fireDate = NSDate(timeIntervalSinceNow: 0)
             UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
-
-        
         }
-        
-        
         
         connectToXing(urlXing)
 
@@ -80,6 +76,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(application: UIApplication) {
         if timer != nil{
             timer.invalidate()
+            println("++++++++++++++ NOW SENDING WELCOME MESSAGE...")
+            if(XingClient.sharedInstance.isNewVisit){
+                XingClient.sharedInstance.sendMessageToMember()
+            }
+            
         }
         println("++++++++++++++ applicationDidBecomeActive")
 
@@ -93,34 +94,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
-        println("++++++++++++++ application")
-        self.urlXing = url
-        connectToXing(url)
-        
+            println("+++++++++++++ application")
+            self.urlXing = url
+            connectToXing(url)
         return true
     }
     
     func connectToXing(url: NSURL) ->Bool{
+        
+        
         println("Connecting to Xing.")
         if XingClient.sharedInstance.requestSerializer.accessToken != nil {
-            
-//            let requestToken: BDBOAuthToken = XingClient.sharedInstance.requestSerializer.requestToken
-            
-            
-//            let accessToken: BDBOAuthToken = XingClient.sharedInstance.requestSerializer.accessToken
-
-            
             println("\n\nACCESS TOKEN ALREADY EXIST\n\n")
             XingClient.sharedInstance.GET("/v1/users/orestis_salinger/visits", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response:AnyObject!) -> Void in
                 let dict = response as Dictionary<String, AnyObject>
                 let visits : AnyObject? = dict["visits"]
                 let vc = LoginViewController(nibName: "LoginView", bundle: nil)
+                println(response)
                 vc.didRecieveResponse(XingClient.sharedInstance.extractVisitorsFromDict(dict as NSDictionary))
                 }, failure: { (operation: AFHTTPRequestOperation!,error: NSError!) -> Void in
                     println("Error: \(error)")
             })
-
-
         }else{
             println("ACCESS TOKEN DOES NOT EXIST")
 
@@ -145,8 +139,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
-    
-    
     
 }
 
