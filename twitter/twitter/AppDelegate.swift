@@ -20,9 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        if(UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:")))
+        {
+            application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert | UIUserNotificationType.Badge, categories: nil))
+        }
+        else
+        {
+            //do iOS 7 stuff, which is pretty much nothing for local notifications.
+        }
         return true
     }
-
+    
+    
+    
     func applicationWillResignActive(application: UIApplication) {
         println("++++++++++++++ applicationWillResignActive")
 
@@ -44,6 +54,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func update() {
         println("TIMER EVENT")
+        if XingClient.sharedInstance.isNewVisit{
+            var localNotification:UILocalNotification = UILocalNotification()
+            localNotification.alertAction = "Send Message..."
+            localNotification.alertBody = "New visitor on XING: \(XingClient.sharedInstance.visitorDatas[0].name)"
+            localNotification.fireDate = NSDate(timeIntervalSinceNow: 0)
+            UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+
+        
+        }
+        
+        
+        
         connectToXing(urlXing)
 
     }
@@ -125,6 +147,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-
+    
 }
 

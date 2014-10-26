@@ -19,7 +19,7 @@ let scope = "https://api.xing.com"
 class XingClient: BDBOAuth1RequestOperationManager {
     var response:Array<Dictionary<String, AnyObject>>?
     var visitorDatas:[VisitorData] = []
-    
+    var isNewVisit:Bool = false
     class var sharedInstance: XingClient {
         struct Static {
             static let instance = XingClient(baseURL: tBaseUrl, consumerKey: tConsumerKey, consumerSecret:tConsumerSecret)
@@ -66,7 +66,7 @@ class XingClient: BDBOAuth1RequestOperationManager {
     func persist(visitor: VisitorData)->Bool{
         let userDefaults = NSUserDefaults.standardUserDefaults()
         userDefaults.setObject(visitor.name, forKey: "lastXingVisitor.name")
-        userDefaults.setObject(visitor.visitDate, forKey: "lastXingVisitor.visitDate")
+        userDefaults.setObject("\(visitor.visitDate)", forKey: "lastXingVisitor.visitDate")
 
         //        userDefaults.synchronize()
         return true
@@ -105,6 +105,7 @@ class XingClient: BDBOAuth1RequestOperationManager {
             if isNewLastVisitor(visitorDatas[0]){
                 persist(visitorDatas[0])
                 println("New Last Visitor \(visitorDatas[0].name)")
+                isNewVisit = true
             }else{
                 println("No New Last Visitor \(visitorDatas[0].name)")
             }
@@ -150,10 +151,12 @@ class XingClient: BDBOAuth1RequestOperationManager {
     }
     
     func isNewLastVisitor(data: VisitorData)-> Bool{
-        println("IS NEW FS: \(readLastVisitorFromFS())" )
-        println("IS NEW FS: \(data.name)_\(data.visitDate)" )
+        let lastVisit = "\(data.name)_\(data.visitDate)"
 
-        return readLastVisitorFromFS() != "\(data.name)_\(data.visitDate)"
+        println("IS NEW PERSISTED: \(readLastVisitorFromFS())" )
+        println("IS NEW FRESH: \(lastVisit)" )
+//        return readLastVisitorFromFS() != lastVisit
+        return true
     }
     
     func isDataGiven(visit: AnyObject)-> Bool{
@@ -178,6 +181,9 @@ class XingClient: BDBOAuth1RequestOperationManager {
         self.GET("/v1/users/orestis_salinger/visits", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response:AnyObject!) -> Void in
             let dict = response as Dictionary<String, AnyObject>
             let visits : AnyObject? = dict["visits"]
+            
+            
+            
             let vc = LoginViewController(nibName: "LoginView", bundle: nil)
             vc.didRecieveResponse(XingClient.sharedInstance.extractVisitorsFromDict(dict as NSDictionary))
             
@@ -186,4 +192,17 @@ class XingClient: BDBOAuth1RequestOperationManager {
         })
     
     }
+    
+    func getDateComponents()->NSDateComponents{
+        let date = NSDate()
+        let calendar = getCurrentCalendar()
+        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
+        return components
+    }
+    
+    func getCurrentCalendar()-> NSCalendar{
+        return  NSCalendar.currentCalendar()
+    
+    }
+    
 }
