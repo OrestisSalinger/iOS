@@ -7,8 +7,8 @@
 //
 
 import UIKit
-let tConsumerKey = "c571770851588f4748f6"
-let tConsumerSecret = "7b1510d4a3bef9599110fbb4b730948db8932592"
+let tConsumerKey = "d1ec7c9ac8c2cb361d89"
+let tConsumerSecret = "cecd9bc77eb8b9c847be8eba038c24a539a9cf49"
 let tBaseUrl = NSURL(string: "https://api.xing.com")
 let request_token_path = "/v1/request_token"
 let callback_url = "cptwitterdemo://authenticate/xing/"
@@ -45,7 +45,7 @@ class XingClient: BDBOAuth1RequestOperationManager {
     
     func login() {
         println("LOGGING IN")
-        if XingClient.sharedInstance.requestSerializer.requestToken == nil{
+        if !isAuthorized(){
             
             println("NO REQUEST TOKEN GIVEN logging in: \(user):\(pass)")
             removeAccessTokenIfGiven()
@@ -65,16 +65,56 @@ class XingClient: BDBOAuth1RequestOperationManager {
         }
     }
     
-    
-    
-    func persist(visitor: VisitorData)->Bool{
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(visitor.name, forKey: "lastXingVisitor.name")
-        userDefaults.setObject("\(visitor.visitDate)", forKey: "lastXingVisitor.visitDate")
-
-        //        userDefaults.synchronize()
+    func persistVisitors(visitors: [VisitorData])->Bool{
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("MyFile.plist")
+        var data = NSMutableArray(objects: visitors)
+        data.writeToFile(path, atomically: true)
         return true
     }
+    func persistVisitor(visitor: VisitorData)-> Bool{
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        //TODO Persist all data
+        
+        if visitorDatas.count > 0 {
+            log(Level.Verbose,"PERSISTING ")
+            userDefaults.setObject(visitor.name, forKey: "lastXingVisitor.name")
+            userDefaults.setObject("\(visitor.visitDate)", forKey: "lastXingVisitor.visitDate")
+
+        }
+        return true
+
+        
+    }
+    
+    func readVisitorsFromFS()-> VisitorData{
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0)as NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("MyFile.plist")
+        
+        let fileManager = NSFileManager.defaultManager()
+        
+        // Check if file exists
+        if(!fileManager.fileExistsAtPath(path))
+        {
+            // If it doesn't, copy it from the default file in the Resources folder
+//            let bundle = NSBundle.mainBundle().pathForResource("DefaultFile", ofType: "plist")
+//            fileManager.copyItemAtPath(bundle!, toPath: path, error:nil)
+        }
+        var data = NSMutableArray(contentsOfFile: path)
+        log(Level.Verbose, "\n\n\n\n\"Data on FS:\(data?.count)\n\n\n\n")
+        
+        
+//        var result:VisitorData = VisitorData()
+//        if let userDefaults = NSUserDefaults.standardUserDefaults() as NSUserDefaults?{
+//            if let visitorsPersisted : AnyObject = userDefaults.objectForKey("visitorDatas"){
+//                println("Result from FS: \(visitorsPersisted)")
+//            }
+//        }
+        return VisitorData()
+    }
+
     
     func readLastVisitorFromFS()-> String{
         var result:String = ""
@@ -93,6 +133,8 @@ class XingClient: BDBOAuth1RequestOperationManager {
         var visitorDatas:[VisitorData] = []
         if results.count > 0 {
             let dict = results as Dictionary<String, AnyObject>
+            println("visit:  \(dict)")
+            
             let visits : AnyObject? = dict["visits"]
             let collection = visits! as Array<Dictionary<String, AnyObject>>
             for visit in collection {
@@ -104,10 +146,12 @@ class XingClient: BDBOAuth1RequestOperationManager {
             }
         }
         if(!isPersisted()){
-            persist(visitorDatas[0])
+            persistVisitor(visitorDatas[0])
+//            persistVisitors(visitorDatas)
         }else{
             if isNewLastVisitor(visitorDatas[0]){
-                persist(visitorDatas[0])
+//                persistVisitors(visitorDatas)
+                persistVisitor(visitorDatas[0])
                 println("New Last Visitor \(visitorDatas[0].name)")
                 isNewVisit = true
             }else{
@@ -155,12 +199,15 @@ class XingClient: BDBOAuth1RequestOperationManager {
     }
     
     func isNewLastVisitor(data: VisitorData)-> Bool{
+        readVisitorsFromFS()
+        
+        
         let lastVisit = "\(data.name)_\(data.visitDate)"
-
+        
         println("IS NEW PERSISTED: \(readLastVisitorFromFS())" )
         println("IS NEW FRESH: \(lastVisit)" )
-        return readLastVisitorFromFS() != lastVisit
-//        return true
+//        return readLastVisitorFromFS() != lastVisit
+        return true
     }
     
     func isDataGiven(visit: AnyObject)-> Bool{
@@ -186,9 +233,7 @@ class XingClient: BDBOAuth1RequestOperationManager {
                 println("... \(response)")
             }, failure: { (operation: AFHTTPRequestOperation!,error: NSError!) -> Void in
                 println("Error: \(error)")
-        
         })
-        
     }
     
     
@@ -197,12 +242,8 @@ class XingClient: BDBOAuth1RequestOperationManager {
         self.GET("/v1/users/orestis_salinger/visits", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response:AnyObject!) -> Void in
             let dict = response as Dictionary<String, AnyObject>
             let visits : AnyObject? = dict["visits"]
-            
-            
-            
             let vc = LoginViewController(nibName: "LoginView", bundle: nil)
             vc.didRecieveResponse(XingClient.sharedInstance.extractVisitorsFromDict(dict as NSDictionary))
-            
             }, failure: { (operation: AFHTTPRequestOperation!,error: NSError!) -> Void in
                 println("Error: \(error)")
         })

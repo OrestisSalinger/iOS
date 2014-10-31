@@ -8,7 +8,7 @@
 
 import Foundation
 
-class VisitorData: NSObject {
+class VisitorData: NSObject{
     var name = ""
     var companyName = ""
     var photoURL = ""

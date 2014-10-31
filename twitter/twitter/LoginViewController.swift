@@ -6,10 +6,21 @@
 //  Copyright (c) 2014 Orestis Salinger. All rights reserved.
 //
 import UIKit
-
+import CoreData
 class LoginViewController: UIViewController, XingSearchAPIProtocol{
     
     @IBOutlet weak var visitButton: UIButton!
+    
+//    lazy var managedObjectContext : NSManagedObjectContext? = {
+//        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+//        if let managedObjectContext = appDelegate.managedObjectContext {
+//            return managedObjectContext
+//        }
+//        else {
+//            return nil
+//        }
+//        }()
+    
     
     
     let xingClient = XingClient.sharedInstance
@@ -24,7 +35,7 @@ class LoginViewController: UIViewController, XingSearchAPIProtocol{
     
     
     @IBAction func onLogin(sender: AnyObject) {
-        println("********** onLogin")
+//        println("********** onLogin MOC: \(managedObjectContext?.description)")
         xingClient.login()
         println("********** Logged in")
         
